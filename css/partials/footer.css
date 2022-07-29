@@ -1,0 +1,89 @@
+.container-footer{
+    width: 100%;
+    background: #FBFBFB;
+    box-shadow: 0px -4px 40px 1px rgba(157, 157, 157, 0.2);
+    margin-top: 40px;
+    font-family: 'Arial';
+    color: #4e4e4e;
+}
+.row-top, .row-bottom{
+    padding: 30px 40px;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.row-mid{
+    padding: 10px 40px;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.newsleters{
+    width: calc(40% - 20px);
+}
+.newsletters h3, .newsletters p{
+    font-family: 'Arial';
+    color: #4e4e4e;
+    margin-bottom: 10px;
+}
+.newsleters input{
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    font-size: 14px;
+    font-family: 'Arial';
+    font-weight: 600;
+    color: #ffd874;
+    background: #ffffff;
+    box-shadow: #c6c6c6 0px 0px 2px 1px;
+}
+.newsleters input:focus{
+    outline: 2px solid #d2951b;
+}
+.newsleters button{
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    background: #d2951b;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Arial';
+    box-shadow: #c6c6c6 0px 0px 2px 1px;
+}
+.newsleters button:hover{
+    color: #d2951b;
+    border: 2px solid #d2951b;
+    background: #fcfcfc;
+}
+::placeholder{
+    color: #dedede;
+}
+.row-mid .links{
+    width: calc(60%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-links ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.social-links ul li{
+    list-style: none;
+    margin: 0 10px;
+}
+.credits{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}

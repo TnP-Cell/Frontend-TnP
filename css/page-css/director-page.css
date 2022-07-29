@@ -1,0 +1,18 @@
+p {
+    text-decoration: none;
+    color: #505050;
+    font-family: 'Arial';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 10px;
+    text-align: justify;
+    padding: 0 2%;
+}
+h3{
+    font-family: 'Arial';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 10px;
+}

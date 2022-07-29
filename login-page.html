@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="node_modules\font-awesome\css\font-awesome.min.css">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="public\css\page-css\login-page.css">
+
+    <script defer type="text/javascript" src="../public/js/login-page.js"></script>
+</head>
+
+<body>
+    <section class="login-page">
+        <div class="login-container">
+            <div class="header-div">
+                <img src="public\assets\Screenshot 2022-04-10 235928.png" alt="college">
+            </div>
+            <div class="content-div">
+                <div class="title">
+                    <h1>Search for Student Profile</h1>
+                </div>
+                <div class="form-div">
+                    <form action="/login" method="post">
+                        <div class="form-group">
+                            <label for="username">Institute Email</label>
+                            <input type="text" name="username" id="username" class="form-control"
+                                placeholder="Enter Username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">D.O.B (DDMMYYYY)</label>
+                            <input type="password" name="password" id="password" class="form-control"
+                                placeholder="Enter Password" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn">Get Profile</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="content-div">
+                <div class="title">
+                    <h1>Submit Student Profile</h1>
+                </div>
+                <div class="form-div">
+                    <form action="/register" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Institute Email</label>
+                            <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password-1">D.O.B (DDMMYYYY)</label>
+                            <input type="password" name="password" id="password-1" class="form-control"
+                                placeholder="Enter Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="branch">Branch</label>
+                            <input type="text" name="branch" id="branch" class="form-control" placeholder="Enter Branch"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="roll">Roll No.</label>
+                            <input type="text" name="roll" id="roll" class="form-control" placeholder="Enter Roll No."
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cgpa">CGPA</label>
+                            <input type="text" name="cgpa" id="cgpa" class="form-control" placeholder="Enter CGPA"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone No.</label>
+                            <input type="text" name="phone" id="phone" class="form-control"
+                                placeholder="Enter Contact No." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="=linkedin">LinkedIn Link</label>
+                            <input type="text" name="linkedin" id="=linkedin" class="form-control"
+                                placeholder="Enter LinkedIn Profile Link" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="github">GitHub</label>
+                            <input type="text" name="github" id="github" class="form-control"
+                                placeholder="Enter GitHub Profile Link" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="resume">Resume</label>
+                            <input type="file" name="resume" id="resume" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn">Submit Profile</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-div">
+                <div class="buttons-l">
+                    <a href="#" id="subprof" class="btn">Submit your Profile</a>
+                </div>
+                <div class="buttons-l">
+                    <a href="/" class="btn">Need Help?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Resume</title>
+</head>
+
+<body>
+    <% if(!check) {%>
+        <form id="introForm" action="/resumeAdd" enctype="multipart/form-data" method="post">
+            <div class="form-input">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name">
+            </div>
+            <div class="form-input">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email">
+            </div>
+            <div class="form-input">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" placeholder="Your phone">
+            </div>
+            <div class="form-input">
+                <label for="course">Course</label>
+                <input type="text" id="course" name="course" placeholder="Your course">
+            </div>
+            <div class="form-input">
+                <label for="cgpa">CGPA</label>
+                <input type="text" id="cgpa" name="cgpa" placeholder="Your CGPA">
+            </div>
+            <div class="form-input">
+                <label for="image">Image</label>
+                <input type="file" id="image" name="image" required>
+            </div>
+            <div class="form-submit">
+                <input type="submit" value="Save">
+            </div>
+        </form>
+        <%} else {%>
+            <form id="introForm" enctype="multipart/form-data" method="post">
+                <div class="form-input">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" disabled value="<%=result.name%>">
+                </div>
+                <div class="form-input">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" disabled
+                        value="<%=result.email%>">
+                </div>
+                <div class="form-input">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone" placeholder="Your phone" disabled
+                        value="<%=result.mobile%>">
+                </div>
+                <div class="form-input">
+                    <label for="course">Course</label>
+                    <input type="text" id="course" name="course" placeholder="Your course" disabled
+                        value="<%=result.course%>">
+                </div>
+                <div class="form-input">
+                    <label for="cgpa">CGPA</label>
+                    <input type="text" id="cgpa" name="cgpa" placeholder="Your CGPA" disabled value="<%=result.cgpa%>">
+                </div>
+                <div class="form-input">
+                    <label for="image">Image</label>
+                    <input type="file" id="image" name="image" placeholder="Your image">
+                </div>
+            </form>
+            <form id="academicDetails" action="/resumeAcad/<%=result.email%>" method="post">
+                <h4>Academic Details: </h4>
+                <div class="form-input">
+                    <label for="course">Course</label>
+                    <input type="text" id="course" name="course">
+                </div>
+                <div class="form-input">
+                    <label for="institute">Institute</label>
+                    <input type="text" id="institute" name="institute">
+                </div>
+                <% let check = false; %>
+                    <label for="score">Score</label>
+                    <input type="text" id="score" name="score">
+                </div>
+                <div class="form-input">
+                    <label for="year">Year</label>
+                    <input type="text" id="year" name="year">
+                </div>
+                <div class="form-submit">
+                    <input type="submit" value="Add">
+                </div>
+            </form>
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>Institute</th>
+                    <th>Score</th>
+                    <th>Year</th>
+                </tr>
+                <% for(let i = 0; i < result.academic.length; i++) { %>
+                    <tr>
+                        <td><%=result.academic[i].course%></td>
+                        <td><%=result.academic[i].institute%></td>
+                        <td><%=result.academic[i].score%></td>
+                        <td><%=result.academic[i].year%></td>
+                    </tr>
+                <% } %>
+            </table>
+            <form id="subjects" action="../resumeSubjects/<%=result.email%>" method="post">
+                <h4>Subjects Details: </h4>
+                <div class="form-input">
+                    <label for="subject">Subjects</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-submit">
+                    <input type="submit" value="Add">
+                </div>
+            </form>
+            <table>
+                <tr>
+                    <th>Subjects</th>
+                </tr>
+                <% for(let i = 0; i < result.subjects.length; i++) { %>
+                    <tr>
+                        <td><%=result.subjects[i]%></td>
+                    </tr>
+                <% } %>
+            </table>
+            <form id="skills" action="../resumeSkills/<%=result.email%>" method="post">
+                <h4>Skills: </h4>
+                <div class="form-input">
+                    <label for="skills">Skills</label>
+                    <input type="text" id="skills" name="skills">
+                </div>
+                <div class="form-submit">
+                    <input type="submit" value="Add">
+                </div>
+            </form>
+            <table>
+                <tr>
+                    <th>Skills</th>
+                </tr>
+                <% for(let i = 0; i < result.skills.length; i++) { %>
+                    <tr>
+                        <td><%=result.skills[i]%></td>
+                    </tr>
+                <% } %>
+            </table>
+            <form id="experienceDetails" action="../resumeExperience/<%=result.email%>" method="post">
+                <h4>Experiences: </h4>
+                <div class="form-input">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div class="form-input">
+                    <label for="desc">Description</label>
+                    <input type="text" id="desc" name="desc">
+                </div>
+                <div class="form-input">
+                    <label for="duration">Duration</label>
+                    <input type="text" id="duration" name="duration">
+                </div>
+                <div class="form-submit">
+                    <input type="submit" value="Add">
+                </div>
+            </form>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Duration</th>
+                </tr>
+                <% for(let i = 0; i < result.experience.length; i++) { %>
+                    <tr>
+                        <td><%=result.experience[i].title%></td>
+                        <td><%=result.experience[i].desc%></td>
+                        <td><%=result.experience[i].duration%></td>
+                    </tr>
+                <% } %>
+            </table>
+            <form id="projectDetails" action="" method="post">
+                <h4>Internships/Projects: </h4>
+                <div class="form-input">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div class="form-input">
+                    <label for="desc">Description</label>
+                    <input type="text" id="desc" name="desc">
+                </div>
+                <div class="form-input">
+                    <label for="duration">Duration</label>
+                    <input type="text" id="duration" name="duration">
+                </div>
+                <div class="form-submit">
+                    <input type="submit" value="Add">
+                </div>
+            </form>
+        <%}%>
+</body>
+
+</html>

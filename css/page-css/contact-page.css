@@ -1,0 +1,50 @@
+.container-c {
+    width: 90%;
+    height: auto;
+    margin: 2% 5%;
+    background-color: FFFFFF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
+}
+.heading-c{
+    margin: 1% 2%;
+}
+.heading-c h1{
+    font-size: 30px;
+    font-family: 'Arial';
+    font-weight: 600;
+    color: #4e4e4e;
+    text-align: left;
+    margin: 0 5px;
+}
+.heading-c .line-style{
+    width: 230px;
+}
+.message-c p{
+    font-size: 20px;
+    font-family: 'Arial';
+    font-weight: 400;
+    color: #4e4e4e;
+    text-align: left;
+    margin: 0 2%;
+    margin-bottom: 20px;
+}
+.message-c h3{
+    font-size: 24px;
+    font-family: 'Arial';
+    font-weight: 600;
+    color: #4e4e4e;
+    text-align: left;
+    margin: 0 2%;
+}
+.container-c .contact-card{
+    margin-bottom: 30px;
+}
+.team-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2% 3%;
+}
