@@ -5,26 +5,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Login</title>
 
-    <link href="node_modules\font-awesome\css\font-awesome.min.css">
-    <link rel="stylesheet" href="../public/css/main.css">
-    <link rel="stylesheet" href="public\css\page-css\login-page.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css\page-css\login-page.css">
 
-    <script defer type="text/javascript" src="../public/js/login-page.js"></script>
+    <script defer type="text/javascript" src="./js/login-page.js"></script>
 </head>
 
 <body>
     <section class="login-page">
         <div class="login-container">
             <div class="header-div">
-                <img src="public\assets\Screenshot 2022-04-10 235928.png" alt="college">
+                <img src="./assets\Screenshot 2022-04-10 235928.png" alt="college">
             </div>
             <div class="content-div">
                 <div class="title">
                     <h1>Search for Student Profile</h1>
                 </div>
                 <div class="form-div">
-                    <form action="/login" method="post">
+                    <form id="loginForm" method="post">
                         <div class="form-group">
                             <label for="username">Institute Email</label>
                             <input type="text" name="username" id="username" class="form-control"
@@ -46,7 +47,7 @@
                     <h1>Submit Student Profile</h1>
                 </div>
                 <div class="form-div">
-                    <form action="/register" method="post" enctype="multipart/form-data">
+                    <form id="registerForm" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name"
@@ -93,6 +94,10 @@
                                 placeholder="Enter GitHub Profile Link" required>
                         </div>
                         <div class="form-group">
+                            <label for="profilePic">Profile Pic</label>
+                            <input type="file" name="profilePic" id="profilePic" class="form-control" required>
+                        </div>
+                        <div class="form-group">
                             <label for="resume">Resume</label>
                             <input type="file" name="resume" id="resume" class="form-control" required>
                         </div>
@@ -107,7 +112,7 @@
                     <a href="#" id="subprof" class="btn">Submit your Profile</a>
                 </div>
                 <div class="buttons-l">
-                    <a href="/" class="btn">Need Help?</a>
+                    <a href="./index.html" class="btn">Need Help?</a>
                 </div>
             </div>
         </div>

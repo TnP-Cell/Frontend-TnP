@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%=result.name%> | Profile
-    </title>
+    <title></title>
 
-    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../public/css/main.css">
-    <link rel="stylesheet" href="public\css\page-css\student-page.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css\page-css\student-page.css">
+
+    <script defer type="text/javascript" src="./js/profile.js"></script>
 </head>
 
 <body>
@@ -19,20 +19,20 @@
         <div class="side-container">
             <div class="profile">
                 <div class="profile-img">
-                    <img src="public\assets\profile-img.jpeg" alt="">
+                    <img src="./assets/blank-profile-picture-973460.svg" alt="img" id="profile-pic">
                 </div>
                 <div class="profile-name">
                     <h3>
-                        <%=result.name%>
+                        <span class="name"></span>
                     </h3>
                     <p>Branch: <span>
-                            <%=result.branch%>
+                            <span class="branch"></span>
                         </span></p>
                     <p>Roll: <span>
-                            <%=result.roll%>
+                            <span class="roll"></span>
                         </span></p>
                     <p>Cgpa: <span>
-                            <%=result.cgpa%>
+                            <span class="cgpa"></span>
                         </span></p>
                 </div>
             </div>
@@ -41,41 +41,40 @@
                     <h3>Contact:</h3>
                     <i class="fa fa-phone"></i>
                     <p>
-                        <%=result.phone%>
+                        <span class="phone"></span>
                     </p>
                     <i class="fa fa-envelope"></i>
                     <p>
-                        <%=result.email%>
+                        <span class="email"></span>
                     </p>
                 </div>
             </div>
             <div class="social-bar">
                 <h3>Other Profiles:</h3>
-                <div class="social-item">
-                    <a href="<%=result.linkedin%>"><i class="fa fa-linkedin"></i> LinkedIn</a>
+                <div class="social-item" id="linkedin">
+                    <!-- <a href="<%#=result.linkedin%>"><i class="fa fa-linkedin"></i> LinkedIn</a> -->
                 </div>
-                <div class="social-item">
-                    <a href="<%=result.github%>"><i class="fa fa-github"></i> GitHub</a>
+                <div class="social-item" id="github">
+                    <!-- <a href="<%#=result.github%>"><i class="fa fa-github"></i> GitHub</a> -->
                 </div>
             </div>
         </div>
         <div class="main-container">
             <div class="top-div">
                 <div class="back-button">
-                    <a href="/">Go Back</a>
+                    <a href="./index.html">Go Back</a>
                 </div>
                 <div class="institute-logo">
-                    <img src="public\assets\Screenshot 2022-04-10 235928.png" alt="">
+                    <img src="./assets\Screenshot 2022-04-10 235928.png" alt="">
                 </div>
             </div>
             <div class="bottom-div">
                 <div class="resume">
                     <!-- attach resume preview here -->
-                    <iframe
-                        src="data:application/<%=result.resume.contentType%>;base64,<%=result.resume.data.toString('base64')%>#toolbar=0&view=fill"
-                        scrolling="no" frameborder="0" seamless="seamless">
-                    </iframe>
-
+                    <!-- <iframe
+                        src="data:application/<%#=result.resume.contentType%>;base64,<%#=result.resume.data.toString('base64')%>#toolbar=0&view=fill"
+                        scrolling="no" frameborder="0" seamless="seamless" id="profile">
+                    </iframe> -->
                 </div>
             </div>
         </div>
