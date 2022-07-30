@@ -1,4 +1,4 @@
-var url = "https://tpc-iiitbh.herokuapp.com/";
+var url = "https://tpc-iiitbh.herokuapp.com";
 
 var names = document.querySelectorAll(".name");
 var branch = document.querySelectorAll(".branch");

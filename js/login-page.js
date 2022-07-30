@@ -1,7 +1,7 @@
 var submitProf = document.querySelector("#subprof");
 var contentDivs = document.querySelectorAll(".content-div");
 var check = 1;
-var url = "https://tpc-iiitbh.herokuapp.com/";
+var url = "https://tpc-iiitbh.herokuapp.com";
 
 contentDivs[1].style.display = "none";
 
