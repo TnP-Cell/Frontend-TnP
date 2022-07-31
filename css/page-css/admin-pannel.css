@@ -123,6 +123,13 @@ img {
     padding: 10px 5%;
 }
 
+.details-div ::placeholder {
+    color: rgba(104, 104, 104, 0.7);
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+}
+
 .left-op, .right-op {
     display: flex;
     flex-direction: row;
@@ -186,11 +193,13 @@ img {
     border-radius: 40px;
     margin: 10px 0;
 }
+
 .publish-btn {
     width: 50%;
     height: auto;
 }
-.publish-btn img{
+
+.publish-btn img {
     width: 100%;
     height: auto;
     padding: 10px;
