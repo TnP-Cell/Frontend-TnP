@@ -83,11 +83,10 @@ img {
     display: flex;
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin: 5vh auto;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin: auto;
 }
 
 .left-div, .right-div {
@@ -96,7 +95,7 @@ img {
     justify-content: space-evenly;
     align-items: center;
     border-radius: 20px;
-    box-shadow: 2px 0px 20px 10px rgba(203, 200, 200, 0.193);
+    box-shadow: 2px 0px 20px 10px rgba(158, 158, 158, 0.193);
     height: 50vh;
     margin: 20px auto;
     padding: 20px 20px;
@@ -203,4 +202,105 @@ img {
     width: 100%;
     height: auto;
     padding: 10px;
+}
+
+.bottom-div {
+    background: #F5F5F5;
+    border: 2px solid #CBCBCB;
+    border-radius: 20px;
+}
+
+.title-div {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 10px 20px;
+    color: #272727;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.history-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    color: #272727;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.h-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    height: 50px;
+    margin: 10px auto;
+}
+
+.time, .h-text, .update-btn, .delete-btn {
+    background: #FFFFFF;
+    border: 2px solid #999999;
+}
+
+.time{
+    width: 50px;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+}
+.time h3{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+.time p{
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0;
+}
+.h-text{
+    width: calc(60% - 60px);
+    height: auto;
+    border-radius: 20px;
+    align-items: center;
+}
+.h-text p{
+    text-align: left;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+.update-btn{
+    width: 160px;
+    height: auto;
+    text-align: center;
+    border-radius: 20px;
+}
+.update-btn button{
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial';
+    font-size: 20px;
+    font-weight: 400;
+    background: #F9F9F9;
+    border-radius: 20px;
+    border: none;
+}
+.delete-btn{
+    width: 160px;
+    height: auto;
+    text-align: center;
+    border-radius: 20px;
+}
+.delete-btn button{
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial';
+    font-size: 20px;
+    font-weight: 500;
+    color: #f22825;
+    background: #F9F9F9;
+    border-radius: 20px;
+    border: none;
 }
