@@ -988,12 +988,36 @@ img {
   }
   .col-2{
     width: 100%;
+    height: auto;
   }
   .carousel-item{
     width: 85%;
   }
   .col-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
+    margin-top: 5vh;
+  }
+  .text-1, .text-2, .text-3{
+    text-align: center;
+  }
+  .col-1 h1{
+    font-size: 20px;
+  }
+  .col-1 .text-3{
+    font-size: 16px;
+    text-align: justify;
+  }
+  .users{
+    width: 100%;
+    margin: auto;
+    height: 30vh;
+    margin-top: 10px;
+  }
+  .recruit-txt{
+    font-size: 20px;
   }
   .row-n{
     flex-direction: column;
@@ -1002,7 +1026,7 @@ img {
     width: 100%;
   }
   .about .row-down{
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .row-down .text, .row-down .image{
     width: 100%;
@@ -1010,8 +1034,29 @@ img {
   .row-down .text-d, .row-down .image-d{
     width: 100%;
   }
+  .marquee-list{
+    width: 160px;
+    height: 80px;
+  }
   .row-mid_c .contact-cards, .row-down_c .connection{
     flex-direction: column;
+  }
+  .connection{
+    width: 100%;
+  }
+  .contact-cards{
+    width: 100%;
+    align-items: center;
+  }
+  .contact-card{
+    width: 90%;
+    margin: 10px 0;
+  }
+  .image_c, .content_c{
+    width: 100%;
+  }
+  .image_c img{
+    width: 90%;
   }
   .container-footer{
     flex-direction: column;
@@ -1019,6 +1064,14 @@ img {
   .container-footer .row-mid, .container-footer .row-bottom{
     flex-direction: column;
   }
+  .newsleters{
+    width: 100%;
+  }
+  .container-footer .row-mid{
+    text-align: left;
+    align-items: flex-start;
+  }
   .row-mid .links{
     flex-direction: column;
   }
+  
