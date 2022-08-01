@@ -132,7 +132,7 @@ img {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: 2px 4px 20px 10px rgba(107, 107, 107, 0.2);
+  box-shadow: 2px 4px 20px 10px rgba(89, 89, 89, 0.2);
   background-color: #d1d1d1;
 }
 
@@ -329,7 +329,7 @@ img {
   border-radius: 20px;
   height: 80vh;
   font-family: "Arial";
-  color: #4e4e4e;
+  color: #414141;
 }
 
 .card2 {
@@ -395,7 +395,7 @@ img {
 }
 
 .inner-card {
-  box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
+  box-shadow: 2px 4px 20px 10px rgba(179, 179, 179, 0.2);
   padding: 2%;
   border-radius: 20px;
   height: 30vh;
@@ -438,7 +438,7 @@ img {
   align-items: center;
   padding: 2%;
   margin: 38px 3%;
-  box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
+  box-shadow: 2px 4px 20px 10px rgba(164, 164, 164, 0.2);
   border-radius: 50px;
 }
 
@@ -1004,7 +1004,7 @@ img {
     text-align: center;
   }
   .col-1 h1{
-    font-size: 20px;
+    font-size: 22px;
   }
   .col-1 .text-3{
     font-size: 16px;
@@ -1025,8 +1025,35 @@ img {
   .news, .event{
     width: 100%;
   }
+  .news h2, .event h2{
+    font-size: 24px;
+    margin: 5px;
+  }
+  .news a, .event a{
+    font-size: 18px;
+  }
   .about .row-down{
     flex-direction: column-reverse;
+  }
+  .about h1{
+    font-size: 24px;
+  }
+  .about a{
+    font-size: 18px;
+  }
+  .about p{
+    font-size: 16px;
+    width: 95%;
+    margin: 5px auto;
+  }
+  .about .image img{
+    max-height: 300px;
+  }
+  .text-d h3, .text-d a{
+    margin-left: 2%;
+  }
+  .line-style img{
+    width: 40vw;
   }
   .row-down .text, .row-down .image{
     width: 100%;
