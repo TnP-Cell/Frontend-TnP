@@ -265,6 +265,8 @@ img {
     height: auto;
     border-radius: 20px;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .h-text p{
     text-align: left;
