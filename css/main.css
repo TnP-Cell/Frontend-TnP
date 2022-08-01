@@ -970,3 +970,55 @@ img {
   text-align: center;
   padding: 20px;
 }
+
+/*----------------------------------*/
+/* Responsive: Media Queries*/
+
+
+@media (max-width: 768px) {
+  .nav-list{
+    display: none;
+  }
+  .nav-logo{
+    display: block;
+    width: 70%;
+  }
+  .container-b .row{
+    flex-direction: column-reverse;
+  }
+  .col-2{
+    width: 100%;
+  }
+  .carousel-item{
+    width: 85%;
+  }
+  .col-1{
+    width: 100%;
+  }
+  .row-n{
+    flex-direction: column;
+  }
+  .news, .event{
+    width: 100%;
+  }
+  .about .row-down{
+    flex-direction: column;
+  }
+  .row-down .text, .row-down .image{
+    width: 100%;
+  }
+  .row-down .text-d, .row-down .image-d{
+    width: 100%;
+  }
+  .row-mid_c .contact-cards, .row-down_c .connection{
+    flex-direction: column;
+  }
+  .container-footer{
+    flex-direction: column;
+  }
+  .container-footer .row-mid, .container-footer .row-bottom{
+    flex-direction: column;
+  }
+  .row-mid .links{
+    flex-direction: column;
+  }
