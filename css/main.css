@@ -833,6 +833,7 @@ img {
 .image_c {
   align-items: left;
   width: calc(40%);
+  
 }
 .content_c {
   width: calc(60% - 20px);
@@ -846,6 +847,7 @@ img {
 }
 .image_c img {
   max-width: 500px;
+  border-radius: 0 50px 50px 0;
 }
 .content_c h3 {
   font-size: 20px;
