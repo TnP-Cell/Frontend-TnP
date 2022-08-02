@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="./fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css\page-css\admin-pannel.css">
+
+    <script defer type="text/javascript" src="./js/admin-panel.js"></script>
+</head>
+
+<body>
+    <section class="student-page">
+        <div class="main-container">
+            <div class="top-div">
+                <div class="back-button">
+                    <a href="./index.html">Go Back</a>
+                </div>
+                <div class="institute-logo">
+                    <img src="./assets\Screenshot 2022-04-10 235928.png" alt="">
+                </div>
+            </div>
+            <div class="mid-div">
+                <div class="left-div">
+                    <div class="option-div">
+                        <div class="left-op" id="news-ab">
+                            <div class="option-icon">
+                                <img id="news-img" src="./assets/option-icon-active.svg" alt="">
+                            </div>
+                            <div class="option-text">
+                                <a href="#"> Add news</a>
+                            </div>
+                        </div>
+                        <div class="right-op" id="events-ab">
+                            <div class="option-icon">
+                                <img id="events-img" src="./assets/option-icon-inactive.svg" alt="">
+                            </div>
+                            <div class="option-text">
+                                <a href="#"> Add event</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-div">
+                        <form id="news-add">
+                            <textarea name="desc" id="desc" cols="40" rows="20"
+                                placeholder="Type your News details..."></textarea>
+                            <input type="link" name="link" id="link" class="form-control"
+                                placeholder="Enter Link(https://...)">
+                            <button class="add-button">Save</button>
+                        </form>
+                        <form id="events-add">
+                            <textarea name="desc" id="desc" cols="40" rows="10"
+                                placeholder="Type your Events details..."></textarea>
+                            <input type="link" name="link" id="username" class="form-control"
+                                placeholder="Enter Link(https://...)">
+                            <button class="add-button">Save</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="right-div">
+                    <!-- <button class="add-button">Save</button> -->
+                    <div class="publish-btn" id="fetch">
+                        <img src="./assets\publish-button.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-div">
+                <div class="title-div">
+                    <h1>History:</h1>
+                </div>
+                <div class="history-items">
+                    <!-- <div class="h-item">
+                        <div class="time">
+                            <h3>03</h3>
+                            <p>Months</p>
+                        </div>
+                        <div class="h-text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quisquam, quidem.</p>
+                        </div>
+                        <div class="update-btn">
+                            <button class="add-button">update</button>
+                        </div>
+                        <div class="delete-btn">
+                            <button class="add-button">delete</button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
