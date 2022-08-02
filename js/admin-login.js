@@ -1,4 +1,4 @@
-var url = "http://localhost:5000";
+var url = "https://tpc-iiitbh.herokuapp.com";
 
 document.forms["admin-login"].addEventListener("submit", (e) => {
   e.preventDefault();

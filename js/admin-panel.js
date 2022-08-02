@@ -1,4 +1,4 @@
-var url = "http://localhost:5000";
+var url = "https://tpc-iiitbh.herokuapp.com";
 
 var historyItems = document.querySelector(".history-items");
 var newsAdd = document.querySelector("#news-add");
