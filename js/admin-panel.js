@@ -74,7 +74,7 @@ const displayNews = (data) => {
     html += `<div class="h-item">
         <div class="time">
             <h3>${data[i].date}</h3>
-            <p></p>
+            <p>${data[i].month}</p>
         </div>
         <div class="h-text">
             <a href="${data[i].news.link}">${data[i].news.desc}</a>
@@ -97,7 +97,7 @@ const displayEvents = (data) => {
     html += `<div class="h-item">
         <div class="time">
             <h3>${data[i].date}</h3>
-            <p></p>
+            <p>${data[i].month}</p>
         </div>
         <div class="h-text">
             <a href="${data[i].news.link}">${data[i].news.desc}</a>
