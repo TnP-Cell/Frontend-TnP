@@ -138,7 +138,7 @@ img {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(242, 202, 43);
+  background: #E9BD43;
   border-radius: 40px;
 }
 
@@ -207,7 +207,7 @@ img {
 
 .active-option::after {
   content: "";
-  background-color: green;
+  background-color: rgb(0, 111, 128);
   width: 115px;
   height: 3px;
   position: absolute;
@@ -221,17 +221,18 @@ img {
 }
 
 .recruit {
-  padding: 2%;
+  padding-top: 2%;
   display: flex;
   flex-direction: column;
   margin-top: 3%;
 }
 
 .recruit-txt {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .recruit-btns {
+  padding: 2%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -240,8 +241,8 @@ img {
 
 .register {
   outline: none;
-  border: 2px solid #EEC42E;
-  background-color: #EEC42E;
+  border: 2px solid #E9BD43;
+  background-color: #E9BD43;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 100%;
   padding: 2% 5%;
@@ -254,13 +255,13 @@ img {
 .register:hover {
   cursor: pointer;
   background-color: #fff;
-  color: #d6b331;
+  color: #E9BD43;
 }
 
 .rst {
   outline: none;
-  border: 2px solid #EEC42E;
-  background-color: #EEC42E;
+  border: 2px solid #E9BD43;
+  background-color: #E9BD43;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 100%;
   padding: 5% 5%;
@@ -272,12 +273,12 @@ img {
 .rst:hover {
   cursor: pointer;
   background-color: #fff;
-  color: #EEC42E;
+  color: #E9BD43;
 }
 
 .contact {
   outline: none;
-  border: 2px solid #EEC42E;
+  border: 2px solid #E9BD43;
   background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 100%;
@@ -290,7 +291,7 @@ img {
 
 .faq {
   outline: none;
-  border: 2px solid #EEC42E;
+  border: 2px solid #E9BD43;
   background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 100%;
@@ -303,6 +304,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   margin-top: 3%;
 }
 
@@ -413,7 +415,7 @@ img {
 .flipper {
   /* position: absolute; */
   margin-top: 14px;
-  align-items: flex-end;
+  align-items: inherit;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -444,7 +446,8 @@ img {
 
 .btn-item:hover {
   cursor: pointer;
-  background-color: #EEC42E;
+  background-color: #E9BD43;
+  color: #fff;
 }
 
 .fade {
@@ -869,8 +872,8 @@ img {
 .buttons .btn {
   border: none;
   border-radius: 20px;
-  background-color: #EEC42E;
-  border: #EEC42E 1.5px solid;
+  background-color: #E9BD43;
+  border: #E9BD43 1.5px solid;
   padding: 10px 20px;
   font-size: 14px;
   font-weight: bold;
@@ -878,7 +881,7 @@ img {
 }
 .buttons .btn:hover {
   background-color: transparent;
-  color: #EEC42E;
+  color: #E9BD43;
 }
 
 .container-footer {
@@ -928,22 +931,22 @@ img {
   box-shadow: #c6c6c6 0px 0px 2px 1px;
 }
 .newsleters input:focus {
-  outline: 2px solid #EEC42E;
+  outline: 2px solid #E9BD43;
 }
 .newsleters button {
   width: 100px;
   padding: 10px;
   border: none;
   border-radius: 0px 20px 20px 0px;
-  background: #EEC42E;
+  background: #E9BD43;
   color: #ffffff;
   font-size: 14px;
   font-family: "Arial";
   box-shadow: #c6c6c6 0px 0px 2px 1px;
 }
 .newsleters button:hover {
-  color: #EEC42E;
-  border: 2px solid #EEC42E;
+  color: #E9BD43;
+  border: 2px solid #E9BD43;
   background: #fcfcfc;
 }
 ::placeholder {
