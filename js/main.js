@@ -141,8 +141,8 @@ students.addEventListener("click", () => {
 });
 
 var flipper = document.querySelectorAll(".flipper");
-var card1 = document.querySelector(".card1");
-var card2 = document.querySelector(".card2");
+var card1 = document.querySelector(".card1-new");
+var card2 = document.querySelector(".card2-new");
 
 flipper[0].addEventListener("click", () => {
   card1.style.display = "none";
