@@ -7,6 +7,7 @@ var newsAddBtn = document.querySelector("#news-ab");
 var eventsAddBtn = document.querySelector("#events-ab");
 var newsImg = document.querySelector("#news-img");
 var eventsImg = document.querySelector("#events-img");
+var backBtn = document.querySelector("#b-btn");
 
 eventsAdd.style.display = "none";
 
@@ -37,6 +38,9 @@ document.forms["news-add"].addEventListener("submit", (e) => {
     .then((data) => {
       if (data.status == 0) {
         alert("News Added Successfully!!");
+        // fetchNewsData();
+        // fetchEventsData();
+        // historyItems.innerHTML = html;
       } else {
         alert("Something went wrong while adding News!!");
       }
@@ -59,6 +63,9 @@ document.forms["events-add"].addEventListener("submit", (e) => {
     .then((data) => {
       if (data.status == 0) {
         alert("Events Added Successfully!!");
+        // fetchNewsData();
+        // fetchEventsData();
+        // historyItems.innerHTML = html;
       } else {
         alert("Something went wrong while adding Events!!");
       }
@@ -67,51 +74,88 @@ document.forms["events-add"].addEventListener("submit", (e) => {
       alert("Error: " + err);
     });
 });
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+var details = [];
 
 const displayNews = (data) => {
-  var html = ``;
+  let html = ``;
   for (let i = data.length - 1; i >= 0; i--) {
     html += `<div class="h-item">
         <div class="time">
             <h3>${data[i].date}</h3>
-            <p>${data[i].month}</p>
+            <p>${months[data[i].month]}</p>
         </div>
         <div class="h-text">
-            <a href="${data[i].news.link}">${data[i].news.desc}</a>
+            <a href="${data[i].news.link}" target="_blank">${
+      data[i].news.desc
+    }</a>
         </div>
         <div class="update-btn">
-            <button class="add-button" id="update-data" value="${data[i]._id}">Update</button>
+            <button class="add-button" id="update-data" value="${
+              data[i]._id
+            }">Update</button>
         </div>
         <div class="delete-btn">
-            <button class="add-button" id="delete-data" value="${data[i]._id}">Delete</button>
+            <button class="add-button" id="delete-data" value="${
+              data[i]._id
+            }">Delete</button>
         </div>
     </div>`;
   }
-  // console.log(html);
-  historyItems.innerHTML += html;
+  details.push(html);
+  console.log(html);
 };
 
 const displayEvents = (data) => {
-  var html = ``;
+  let html = ``;
   for (let i = data.length - 1; i >= 0; i--) {
     html += `<div class="h-item">
         <div class="time">
             <h3>${data[i].date}</h3>
-            <p>${data[i].month}</p>
+            <p>${months[data[i].month]}</p>
         </div>
         <div class="h-text">
-            <a href="${data[i].news.link}">${data[i].news.desc}</a>
+            <a href="${data[i].news.link}" target="_blank">${
+      data[i].news.desc
+    }</a>
         </div>
         <div class="update-btn">
-            <button class="add-button" id="update-data" value="${data[i]._id}">Update</button>
+            <button class="add-button" id="update-data" value="${
+              data[i]._id
+            }">Update</button>
         </div>
         <div class="delete-btn">
-            <button class="add-button" id="delete-data" value="${data[i]._id}">Delete</button>
+            <button class="add-button" id="delete-data" value="${
+              data[i]._id
+            }">Delete</button>
         </div>
     </div>`;
   }
-  // console.log(html);
-  historyItems.innerHTML += html;
+  details.push(html);
+  console.log(html);
+};
+
+const displayDetails = () => {
+  let html = ``;
+  details.forEach((d) => {
+    html += d;
+    console.log(details.length);
+  });
+  historyItems.innerHTML = html;
 };
 
 const displayData = (data) => {
@@ -193,13 +237,18 @@ const fetchEventsData = () => {
     });
 };
 
-document.querySelector("#fetch").addEventListener("click", () => {
-  fetchNewsData();
-  fetchEventsData();
-});
-
 if (localStorage.getItem("adminToken")) {
   fetchAdminData();
+  fetchNewsData();
+  fetchEventsData();
+  displayDetails();
 } else {
   window.location.href = "./admin-login.html";
 }
+
+backBtn.addEventListener("click", () => {
+  localStorage.removeItem("adminToken");
+  window.location.href = "./admin-login.html";
+});
+
+// console.log(html);
