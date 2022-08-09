@@ -160,7 +160,7 @@ flipper[1].addEventListener("click", () => {
 
 const displayNews = (data) => {
   let html = "";
-  for (let i = data.length - 1; i >= 0; i--) {
+  for (let i = data.length - 1; i >= 4; i--) {
     html += `<div class="news-item-content">
     <h3>
         // <a href="${data[i].news.link}">${data[i].news.desc}<span>
@@ -175,7 +175,7 @@ const displayNews = (data) => {
 
 const displayEvents = (data) => {
   let html = "";
-  for (let i = data.length - 1; i >= 0; i--) {
+  for (let i = data.length - 1; i >= 4; i--) {
     html += `<div class="event-item-content">
     <h3>
         <a href="${data[i].events.link}">${data[i].events.desc}<span>
