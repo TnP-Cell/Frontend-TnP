@@ -1,4 +1,4 @@
-const url = "http://localhost:5000";
+const url = "https://tpc-iiitbh.herokuapp.com";
 
 var inst = document.querySelector("#inst1");
 var people = document.querySelector("#people1");
