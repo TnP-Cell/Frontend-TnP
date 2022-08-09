@@ -1,3 +1,5 @@
+const url = "http://localhost:5000";
+
 var inst = document.querySelector("#inst1");
 var people = document.querySelector("#people1");
 var recruit = document.querySelector("#recruit1");
@@ -6,6 +8,8 @@ var cross = document.querySelector(".cross");
 var menu = document.querySelector(".menu");
 
 var nav = document.querySelectorAll(".nav-dropdown");
+var newsItems = document.querySelector(".news-items");
+var eventItems = document.querySelector(".event-items");
 
 let flag = 0;
 
@@ -153,3 +157,68 @@ flipper[1].addEventListener("click", () => {
   card2.style.display = "none";
   card1.style.display = "block";
 });
+
+const displayNews = (data) => {
+  let html = "";
+  for (let i = data.length - 1; i >= 0; i--) {
+    html += `<div class="news-item-content">
+    <h3>
+        // <a href="${data[i].news.link}">${data[i].news.desc}<span>
+                (New)
+            </span>
+        </a>
+    </h3>
+</div>`;
+  }
+  newsItems.innerHTML = html;
+};
+
+const displayEvents = (data) => {
+  let html = "";
+  for (let i = data.length - 1; i >= 0; i--) {
+    html += `<div class="event-item-content">
+    <h3>
+        <a href="${data[i].events.link}">${data[i].events.desc}<span>
+                (new)
+            </span>
+        </a>
+    </h3>
+</div>`;
+  }
+  eventItems.innerHTML = html;
+};
+
+const fetchNewsData = () => {
+  fetch(`${url}/api/news/newsFetch`, {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      displayNews(data.data);
+    })
+    .catch((err) => {
+      alert("Something Went Wrong!!" + err);
+    });
+};
+
+const fetchEventsData = () => {
+  fetch(`${url}/api/events/eventsFetch`, {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      displayEvents(data.data);
+    })
+    .catch((err) => {
+      alert("Something Went Wrong!!" + err);
+    });
+};
+
+fetchEventsData();
+fetchNewsData();
