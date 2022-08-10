@@ -141,7 +141,7 @@
   height: 90%;
 }
 
-.logo-grid-acad{
+.logo-grid-acad {
   width: 100%;
   height: auto;
   padding: 2% 5%;
@@ -152,7 +152,7 @@
   margin-top: 20px 1%;
 }
 
-.grid-item-acad{
+.grid-item-acad {
   position: relative;
   width: 160px;
   height: 160px;
@@ -166,13 +166,22 @@
   justify-content: center;
 }
 
-.grid-all-list{
+.grid-all-list {
   width: 100%;
   height: auto;
+  display: grid;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 2% 5%;
   align-items: flex-start;
   margin-top: 20px 1%;
+}
+
+.column-list {
+  flex: 25%;
+  max-width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
