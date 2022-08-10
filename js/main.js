@@ -1,4 +1,5 @@
 const url = "https://tpc-iiitbh.herokuapp.com";
+// var url = "http://localhost:5000";
 
 var inst = document.querySelector("#inst1");
 var people = document.querySelector("#people1");
@@ -159,11 +160,12 @@ flipper[1].addEventListener("click", () => {
 });
 
 const displayNews = (data) => {
-  let html = "";
-  for (let i = data.length - 1; i >= 4; i--) {
+  console.log(21);
+  var html = "";
+  for (var i = 0; i < 6; i++) {
     html += `<div class="news-item-content">
     <h3>
-        // <a href="${data[i].news.link}">${data[i].news.desc}<span>
+        <a href="${data[i].news.link}">${data[i].news.desc}<span>
                 (New)
             </span>
         </a>
@@ -174,8 +176,8 @@ const displayNews = (data) => {
 };
 
 const displayEvents = (data) => {
-  let html = "";
-  for (let i = data.length - 1; i >= 4; i--) {
+  var html = "";
+  for (var i = 0; i < 6; i++) {
     html += `<div class="event-item-content">
     <h3>
         <a href="${data[i].events.link}">${data[i].events.desc}<span>
@@ -188,7 +190,8 @@ const displayEvents = (data) => {
   eventItems.innerHTML = html;
 };
 
-const fetchNewsData = () => {
+function fetchNewsData() {
+  // console.log(1);
   fetch(`${url}/api/news/newsFetch`, {
     method: "POST",
     headers: {
@@ -202,9 +205,10 @@ const fetchNewsData = () => {
     .catch((err) => {
       alert("Something Went Wrong!!" + err);
     });
-};
+}
 
-const fetchEventsData = () => {
+function fetchEventsData() {
+  // console.log(2);
   fetch(`${url}/api/events/eventsFetch`, {
     method: "POST",
     headers: {
@@ -218,7 +222,7 @@ const fetchEventsData = () => {
     .catch((err) => {
       alert("Something Went Wrong!!" + err);
     });
-};
+}
 
 fetchEventsData();
 fetchNewsData();

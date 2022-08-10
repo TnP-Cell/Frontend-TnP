@@ -1,6 +1,8 @@
 var url = "https://tpc-iiitbh.herokuapp.com";
+// var url = "http://localhost:5000";
 
-var historyItems = document.querySelector(".history-items");
+var newsHistory = document.querySelector("#news-history");
+var eventsHistory = document.querySelector("#events-history");
 var newsAdd = document.querySelector("#news-add");
 var eventsAdd = document.querySelector("#events-add");
 var newsAddBtn = document.querySelector("#news-ab");
@@ -89,11 +91,9 @@ const months = [
   "December",
 ];
 
-var details = [];
-
 const displayNews = (data) => {
-  let html = ``;
-  for (let i = data.length - 1; i >= 0; i--) {
+  var html = ``;
+  for (var i = data.length - 1; i >= 0; i--) {
     html += `<div class="h-item">
         <div class="time">
             <h3>${data[i].date}</h3>
@@ -116,13 +116,13 @@ const displayNews = (data) => {
         </div>
     </div>`;
   }
-  details.push(html);
   console.log(html);
+  newsHistory.innerHTML = html;
 };
 
 const displayEvents = (data) => {
-  let html = ``;
-  for (let i = data.length - 1; i >= 0; i--) {
+  var html = ``;
+  for (var i = data.length - 1; i >= 0; i--) {
     html += `<div class="h-item">
         <div class="time">
             <h3>${data[i].date}</h3>
@@ -145,17 +145,8 @@ const displayEvents = (data) => {
         </div>
     </div>`;
   }
-  details.push(html);
   console.log(html);
-};
-
-const displayDetails = () => {
-  let html = ``;
-  details.forEach((d) => {
-    html += d;
-    console.log(details.length);
-  });
-  historyItems.innerHTML = html;
+  eventsHistory.innerHTML = html;
 };
 
 const displayData = (data) => {
@@ -241,7 +232,7 @@ if (localStorage.getItem("adminToken")) {
   fetchAdminData();
   fetchNewsData();
   fetchEventsData();
-  displayDetails();
+  // displayDetails();
 } else {
   window.location.href = "./admin-login.html";
 }
