@@ -93,7 +93,7 @@ const months = [
 
 const displayNews = (data) => {
   var html = ``;
-  for (var i = data.length - 1; i >= 0; i--) {
+  for (var i in data) {
     html += `<div class="h-item">
         <div class="time">
             <h3>${data[i].date}</h3>
@@ -116,21 +116,22 @@ const displayNews = (data) => {
         </div>
     </div>`;
   }
-  console.log(html);
+  // console.log(html);
   newsHistory.innerHTML = html;
 };
 
 const displayEvents = (data) => {
+  // console.log(data)
   var html = ``;
-  for (var i = data.length - 1; i >= 0; i--) {
+  for (var i in data) {
     html += `<div class="h-item">
         <div class="time">
             <h3>${data[i].date}</h3>
             <p>${months[data[i].month]}</p>
         </div>
         <div class="h-text">
-            <a href="${data[i].news.link}" target="_blank">${
-      data[i].news.desc
+            <a href="${data[i].events.link}" target="_blank">${
+      data[i].events.desc
     }</a>
         </div>
         <div class="update-btn">
@@ -145,7 +146,7 @@ const displayEvents = (data) => {
         </div>
     </div>`;
   }
-  console.log(html);
+  // console.log(html);
   eventsHistory.innerHTML = html;
 };
 
@@ -186,8 +187,6 @@ const fetchNewsData = () => {
       "content-type": "application/json",
       auth_token: localStorage.getItem("adminToken"),
     },
-
-    // body: localStorage.getItem("adminToken"),
   })
     .then((res) => res.json())
     .then((data) => {
@@ -211,7 +210,6 @@ const fetchEventsData = () => {
       "content-type": "application/json",
       auth_token: localStorage.getItem("authToken"),
     },
-    // body: localStorage.getItem("adminToken"),
   })
     .then((res) => res.json())
     .then((data) => {
