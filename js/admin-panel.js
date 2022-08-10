@@ -93,7 +93,7 @@ const months = [
 
 const displayNews = (data) => {
   var html = ``;
-  for (var i = data.length - 1; i >= 0; i--) {
+  for (var i in data) {
     html += `<div class="h-item">
         <div class="time">
             <h3>${data[i].date}</h3>
@@ -116,13 +116,13 @@ const displayNews = (data) => {
         </div>
     </div>`;
   }
-  console.log(html);
+  // console.log(html);
   newsHistory.innerHTML = html;
 };
 
 const displayEvents = (data) => {
   var html = ``;
-  for (var i = data.length - 1; i >= 0; i--) {
+  for (var i in data) {
     html += `<div class="h-item">
         <div class="time">
             <h3>${data[i].date}</h3>
