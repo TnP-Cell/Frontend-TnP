@@ -165,3 +165,14 @@
   align-items: center;
   justify-content: center;
 }
+
+.grid-all-list{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2% 5%;
+  align-items: flex-start;
+  margin-top: 20px 1%;
+}
