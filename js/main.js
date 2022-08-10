@@ -160,9 +160,9 @@ flipper[1].addEventListener("click", () => {
 });
 
 const displayNews = (data) => {
-  console.log(21);
+  // console.log(21);
   var html = "";
-  for (var i = 0; i < 6; i++) {
+  for (var i in data) {
     html += `<div class="news-item-content">
     <h3>
         <a href="${data[i].news.link}">${data[i].news.desc}<span>
@@ -177,7 +177,7 @@ const displayNews = (data) => {
 
 const displayEvents = (data) => {
   var html = "";
-  for (var i = 0; i < 6; i++) {
+  for (var i in data) {
     html += `<div class="event-item-content">
     <h3>
         <a href="${data[i].events.link}">${data[i].events.desc}<span>
@@ -190,7 +190,7 @@ const displayEvents = (data) => {
   eventItems.innerHTML = html;
 };
 
-function fetchNewsData() {
+const fetchNewsData = () => {
   // console.log(1);
   fetch(`${url}/api/news/newsFetch`, {
     method: "POST",
@@ -205,9 +205,9 @@ function fetchNewsData() {
     .catch((err) => {
       alert("Something Went Wrong!!" + err);
     });
-}
+};
 
-function fetchEventsData() {
+const fetchEventsData = () => {
   // console.log(2);
   fetch(`${url}/api/events/eventsFetch`, {
     method: "POST",
@@ -222,7 +222,7 @@ function fetchEventsData() {
     .catch((err) => {
       alert("Something Went Wrong!!" + err);
     });
-}
+};
 
 fetchEventsData();
 fetchNewsData();
