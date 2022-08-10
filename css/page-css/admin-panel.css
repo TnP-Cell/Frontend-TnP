@@ -204,6 +204,14 @@ img {
     height: auto;
     padding: 10px;
 }
+.add-button:hover {
+    background: #E7A849;
+    color: white;
+    cursor: pointer;
+}
+.publish-btn img:hover {
+    cursor: pointer;
+}
 
 .bottom-div {
     background: #F5F5F5;
