@@ -3,6 +3,7 @@
   margin: 0 5%;
   align-items: center;
 }
+
 .details {
   display: flex;
   flex-direction: column;
@@ -10,77 +11,96 @@
   justify-content: center;
   margin-top: 20px;
 }
-.heading{
-    margin-bottom: 30px;
+
+.heading {
+  margin-bottom: 30px;
 }
-.heading-content{
-    width: 90vw;
-    padding: 0 20px;
+
+.heading-content {
+  width: 90vw;
+  padding: 0 20px;
 }
-.heading h2{
+
+.heading h2 {
   font-size: 28px;
   font-weight: 600;
   font-family: 'Arial';
   margin-bottom: 20px;
   color: #4e4e4e;
 }
-.heading p{
+
+.heading p {
   font-size: 16px;
   font-weight: 400;
   font-family: 'Arial';
   margin-bottom: 20px;
   color: #4e4e4e;
 }
-.company-logos{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 20px;
-    width: 100%;
-    box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
-    padding: 2% 0;
+
+.company-logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  width: 100%;
+  box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
+  padding: 2% 0;
 }
-.company-logos h3{
+
+.company-logos h3 {
   font-size: 24px;
   font-weight: 600;
   font-family: 'Arial';
   color: #4e4e4e;
   text-transform: uppercase;
 }
-.company-logos h3::after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1.6px;
-    background-color: #4e4e4e;
-    margin-top: 10px;
+
+.company-logos h3::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1.6px;
+  background-color: #4e4e4e;
+  margin-top: 10px;
 }
 
-.logo-grid{
-    width: 100%;
-    padding: 2% 5%;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
-    align-items: center;
-    justify-items: center;
-    grid-gap: 20px;
-    margin-top: 20px 1%;
+.logo-grid {
+  width: 100%;
+  height: auto;
+  padding: 2% 5%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  align-items: center;
+  justify-items: center;
+  grid-gap: 20px;
+  margin-top: 20px 1%;
 }
-.grid-item{
-    position: relative;
-    width: 16vw;
-    height: 16vh;
-    padding: 2%;
-    box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
-    border-radius: 15px;
-    background-color: #fff;
-    margin: 1%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.logo-grid::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1.6px;
+  background-color: #4e4e4e;
+  margin-top: 10px;
 }
-.overlay{
+
+.grid-item {
+  position: relative;
+  width: 16vw;
+  height: 16vh;
+  padding: 2%;
+  box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
+  border-radius: 15px;
+  background-color: #fff;
+  margin: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
   display: none;
   position: absolute;
   top: 65%;
@@ -94,26 +114,65 @@
   filter: backdrop-filter(blur(0.5px));
   background: linear-gradient(to top, rgba(69, 69, 69, 0.91), rgba(255, 255, 255, 0.444));
 }
+
 /* .overlay-content{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
 } */
-.grid-item:hover .overlay{
+.grid-item:hover .overlay {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.grid-item-img{
-    width: 100%;
-    height: 100%;
-    padding: 5%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+
+.grid-item-img {
+  width: 100%;
+  height: auto;
+  padding: 5%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
-.grid-item img{
-    width: 90%;
-    height: 90%;
+
+.grid-item img {
+  width: 90%;
+  height: 90%;
+}
+
+.logo-grid-acad{
+  width: 100%;
+  height: auto;
+  padding: 2% 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px 1%;
+}
+
+.grid-item-acad{
+  position: relative;
+  width: 160px;
+  height: 160px;
+  padding: 2%;
+  box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-all-list{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2% 5%;
+  align-items: flex-start;
+  margin-top: 20px 1%;
 }
