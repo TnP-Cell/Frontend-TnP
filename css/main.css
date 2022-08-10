@@ -4,16 +4,20 @@
   box-sizing: border-box;
   outline: none;
 }
+
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none !important;
 }
+
 img {
   vertical-align: middle;
   max-width: 100%;
 }
+
 .navbar {
   width: 100%;
   display: flex;
@@ -83,10 +87,12 @@ img {
   top: 3%;
   display: inline-block;
 }
+
 .hamburger img {
   width: 50px;
   padding: 5px 10px;
 }
+
 .hamburger .menu {
   display: none;
   position: absolute;
@@ -99,6 +105,7 @@ img {
   border-radius: 20px 0 20px 20px;
   align-items: flex-start;
 }
+
 .menu-items {
   display: flex;
   flex-direction: column;
@@ -108,6 +115,7 @@ img {
   height: 100%;
   padding: 2% 8%;
 }
+
 .menu-item {
   height: 5vh;
   width: 100%;
@@ -145,6 +153,7 @@ img {
 .container-b {
   padding: 0 5%;
 }
+
 .row {
   display: flex;
   flex-direction: row;
@@ -166,16 +175,19 @@ img {
   font-weight: 400;
   margin-bottom: 1%;
 }
+
 .text-2 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 2%;
 }
+
 .text-3 {
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 2%;
 }
+
 .col-2 {
   display: flex;
   flex-direction: column;
@@ -270,6 +282,7 @@ img {
   font-size: 22px;
   color: #fff;
 }
+
 .rst:hover {
   cursor: pointer;
   background-color: #fff;
@@ -327,12 +340,14 @@ button:hover {
 .query-app img {
   width: 100%;
 }
-.card1-new, .card2-new{
+
+.card1-new, .card2-new {
   box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
   border-radius: 20px;
   height: 80vh;
   align-items: center;
 }
+
 .card1,
 .card2 {
   height: calc(80vh - 40px);
@@ -351,7 +366,7 @@ button:hover {
   margin-bottom: 2%;
 }
 
-.carousel-container img:hover{
+.carousel-container img:hover {
   cursor: pointer;
 }
 
@@ -367,12 +382,15 @@ button:hover {
   0% {
     opacity: 0.05;
   }
+
   40% {
     opacity: 1;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0.05;
   }
@@ -414,6 +432,7 @@ button:hover {
   height: 30vh;
   width: 100%;
 }
+
 .inner-card img {
   width: 100%;
   height: 100%;
@@ -455,7 +474,8 @@ button:hover {
   box-shadow: 2px 4px 20px 10px rgba(164, 164, 164, 0.2);
   border-radius: 50px;
 }
-.btn-item img{
+
+.btn-item img {
   width: auto;
   height: 30px;
   margin: auto 15px;
@@ -474,6 +494,7 @@ button:hover {
   from {
     opacity: 0.2;
   }
+
   to {
     opacity: 1;
   }
@@ -487,6 +508,7 @@ button:hover {
   from {
     transform: scale(0.5);
   }
+
   to {
     transform: scale(1);
   }
@@ -495,6 +517,7 @@ button:hover {
 .announcement {
   padding: 20px 0;
 }
+
 .container {
   width: 90%;
   margin: 0 5%;
@@ -502,16 +525,19 @@ button:hover {
   border-radius: 20px;
   box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
 }
+
 .row-n {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 2% 3%;
 }
+
 .news,
 .event {
   width: calc(50% - 5px);
 }
+
 .news h2,
 .event h2 {
   text-align: left;
@@ -522,6 +548,7 @@ button:hover {
   font-size: 35px;
   margin-bottom: 10px;
 }
+
 .news a,
 .event a {
   text-decoration: none;
@@ -530,12 +557,14 @@ button:hover {
   font-weight: 400;
   font-size: 20px;
 }
+
 .news a span,
 .event a span {
   text-decoration: inherit;
   color: #b83b01;
   font-weight: 600;
 }
+
 .news-item-content,
 .event-item-content {
   padding: 10px;
@@ -544,6 +573,7 @@ button:hover {
 .about {
   padding: 20px 0;
 }
+
 .container {
   width: 90%;
   margin: 0 5%;
@@ -558,10 +588,12 @@ button:hover {
   justify-content: space-between;
   padding: 10px 20px;
 }
+
 .heading,
 .social {
   padding: 5px;
 }
+
 .heading h1 {
   text-align: left;
   font-size: 20px;
@@ -571,21 +603,25 @@ button:hover {
   font-size: 35px;
   margin-bottom: 10px;
 }
+
 .line-style {
   max-width: 320px;
 }
+
 .social {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+
 .social a {
   font-size: 20px;
   color: #4e4e4e;
   font-weight: 600;
   margin-right: 10px;
 }
+
 .row-down {
   display: flex;
   flex-direction: row;
@@ -614,6 +650,7 @@ button:hover {
   padding: 10px;
   text-align: justify;
 }
+
 .image img {
   max-height: 400px;
   width: 100%;
@@ -622,6 +659,7 @@ button:hover {
 .message {
   padding: 20px 0;
 }
+
 .container {
   width: 90%;
   margin: 0 5%;
@@ -636,10 +674,12 @@ button:hover {
   justify-content: space-between;
   padding: 10px 20px;
 }
+
 .heading,
 .social {
   padding: 5px;
 }
+
 .heading h1 {
   text-align: left;
   font-size: 20px;
@@ -649,21 +689,25 @@ button:hover {
   font-size: 35px;
   margin-bottom: 10px;
 }
+
 .line-style {
   max-width: 320px;
 }
+
 .social {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+
 .social a {
   font-size: 20px;
   color: #4e4e4e;
   font-weight: 600;
   margin-right: 10px;
 }
+
 .row-down {
   display: flex;
   flex-direction: row;
@@ -673,6 +717,7 @@ button:hover {
 .text-d {
   width: calc(60% - 20px);
 }
+
 .image-d {
   width: calc(40% - 20px);
   display: flex;
@@ -698,6 +743,7 @@ button:hover {
   padding: 10px;
   text-align: justify;
 }
+
 .text-d a {
   text-decoration: none;
   color: #003f53;
@@ -707,6 +753,7 @@ button:hover {
   line-height: 26px;
   padding: 10px;
 }
+
 .text-d h3 {
   font-family: "Arial";
   font-weight: 600;
@@ -714,17 +761,21 @@ button:hover {
   line-height: 26px;
   padding: 10px;
 }
+
 .image-d img {
   max-width: 360px;
   padding: 10px;
 }
+
 .recuiter {
   padding: 20px 0;
 }
+
 .more {
   display: flex;
   align-items: center;
 }
+
 .more h2,
 .more a {
   font-size: 18px;
@@ -759,6 +810,7 @@ button:hover {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(-100%);
   }
@@ -768,6 +820,7 @@ button:hover {
   from {
     transform: translateX(0%);
   }
+
   to {
     transform: translateX(-200%);
   }
@@ -793,9 +846,11 @@ button:hover {
   max-width: 100%;
   height: auto;
 }
+
 .contact-section {
   padding: 20px 0;
 }
+
 .contact-cards {
   display: flex;
   flex-direction: row;
@@ -809,16 +864,19 @@ button:hover {
   border-radius: 20px;
   box-shadow: 2px 2px 20px rgba(153, 153, 153, 0.25);
 }
+
 .card-img {
   width: 180px;
   padding: 10px;
 }
+
 .card-img img {
   width: 100%;
   height: 100%;
   padding: 10%;
   border-radius: 30px;
 }
+
 .card-content {
   text-align: left;
   display: flex;
@@ -828,32 +886,39 @@ button:hover {
   font-family: "Arial";
   color: #4e4e4e;
 }
+
 .card-content h3 {
   font-size: 20px;
   font-weight: bold;
 }
+
 .card-content p {
   font-size: 14px;
   margin-bottom: 20px;
 }
+
 .card-content h4 {
   font-size: 16px;
   font-weight: bold;
 }
+
 .row-down_c {
   margin-top: 40px;
   padding: 30px 0;
 }
+
 .connection {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .image_c {
   align-items: left;
   width: calc(40%);
-  
+
 }
+
 .content_c {
   width: calc(60% - 20px);
   text-align: left;
@@ -864,20 +929,24 @@ button:hover {
   font-family: "Arial";
   color: #4e4e4e;
 }
+
 .image_c img {
   max-width: 500px;
   border-radius: 0 50px 50px 0;
 }
+
 .content_c h3 {
   font-size: 20px;
   font-weight: bold;
   padding: 20px;
 }
+
 .content_c p {
   font-size: 14px;
   margin-bottom: 20px;
   padding: 20px 20px 20px 0;
 }
+
 .buttons {
   width: 300px;
   display: flex;
@@ -885,6 +954,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 }
+
 .buttons .btn {
   border: none;
   border-radius: 20px;
@@ -895,6 +965,7 @@ button:hover {
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
+
 .buttons .btn:hover {
   background-color: transparent;
   color: #E9BD43;
@@ -908,6 +979,7 @@ button:hover {
   font-family: "Arial";
   color: #4e4e4e;
 }
+
 .row-top,
 .row-bottom {
   padding: 30px 40px;
@@ -917,26 +989,35 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 }
+
 .row-mid {
   padding: 10px 40px;
-  margin: 30px;
+  margin: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
+
 .newsleters {
   width: calc(40% - 20px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.newsletters h3,
-.newsletters p {
-  font-family: "Arial";
-  color: #4e4e4e;
+.title-f{
   margin-bottom: 10px;
 }
+.newsletters h4 {
+  font-family: "Arial";
+  color: #4e4e4e;
+  font-size: 24px;
+}
+
 .newsleters input {
   width: 60%;
-  padding: 10px;
+  padding: 10px 0;
   border: none;
   border-radius: 20px 0px 0px 20px;
   font-size: 14px;
@@ -944,30 +1025,37 @@ button:hover {
   font-weight: 600;
   color: #ffd874;
   background: #ffffff;
-  box-shadow: #c6c6c6 0px 0px 2px 1px;
+  box-shadow: inset 2px 2px 5px 2px rgba(60, 60, 60, 0.25);
 }
+
 .newsleters input:focus {
   outline: 2px solid #E9BD43;
 }
+
 .newsleters button {
   width: 100px;
-  padding: 10px;
-  border: none;
+  padding: 8px 0;
+  border: 2px solid #E9BD43;
   border-radius: 0px 20px 20px 0px;
   background: #E9BD43;
   color: #ffffff;
   font-size: 14px;
   font-family: "Arial";
   box-shadow: #c6c6c6 0px 0px 2px 1px;
+  margin-left: -2px;
 }
+
 .newsleters button:hover {
   color: #E9BD43;
   border: 2px solid #E9BD43;
   background: #fcfcfc;
 }
+
 ::placeholder {
   color: #dedede;
+  padding-left: 10px;
 }
+
 .row-mid .links {
   width: calc(60%);
   display: flex;
@@ -982,10 +1070,12 @@ button:hover {
   justify-content: space-around;
   align-items: center;
 }
+
 .social-links ul li {
   list-style: none;
   margin: 0 10px;
 }
+
 .credits {
   width: 100%;
   text-align: center;
@@ -997,129 +1087,163 @@ button:hover {
 
 
 @media (max-width: 768px) {
-  .nav-list{
+  .nav-list {
     display: none;
   }
-  .nav-logo{
+
+  .nav-logo {
     display: block;
     width: 70%;
   }
-  .container-b .row{
+
+  .container-b .row {
     flex-direction: column-reverse;
   }
-  .col-2{
+
+  .col-2 {
     width: 100%;
     height: auto;
   }
-  .carousel-item{
+
+  .carousel-item {
     width: 85%;
   }
-  .col-1{
+
+  .col-1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
     margin-top: 5vh;
   }
-  .text-1, .text-2, .text-3{
+
+  .text-1, .text-2, .text-3 {
     text-align: center;
   }
-  .col-1 h1{
+
+  .col-1 h1 {
     font-size: 22px;
   }
-  .col-1 .text-3{
+
+  .col-1 .text-3 {
     font-size: 16px;
     text-align: justify;
   }
-  .users{
+
+  .users {
     width: 100%;
     margin: auto;
     height: 30vh;
     margin-top: 10px;
   }
-  .recruit-txt{
+
+  .recruit-txt {
     font-size: 20px;
   }
-  .row-n{
+
+  .row-n {
     flex-direction: column;
   }
-  .news, .event{
+
+  .news, .event {
     width: 100%;
   }
-  .news h2, .event h2{
+
+  .news h2, .event h2 {
     font-size: 24px;
     margin: 5px;
   }
-  .news a, .event a{
+
+  .news a, .event a {
     font-size: 18px;
   }
-  .about .row-down{
+
+  .about .row-down {
     flex-direction: column-reverse;
   }
-  .about h1{
+
+  .about h1 {
     font-size: 24px;
   }
-  .about a{
+
+  .about a {
     font-size: 18px;
   }
-  .about p{
+
+  .about p {
     font-size: 16px;
     width: 95%;
     margin: 5px auto;
   }
-  .about .image img{
+
+  .about .image img {
     max-height: 300px;
   }
-  .text-d h3, .text-d a{
+
+  .text-d h3, .text-d a {
     margin-left: 2%;
   }
-  .line-style img{
+
+  .line-style img {
     width: 40vw;
   }
-  .row-down .text, .row-down .image{
+
+  .row-down .text, .row-down .image {
     width: 100%;
   }
-  .row-down .text-d, .row-down .image-d{
+
+  .row-down .text-d, .row-down .image-d {
     width: 100%;
   }
-  .marquee-list{
+
+  .marquee-list {
     width: 160px;
     height: 80px;
   }
-  .row-mid_c .contact-cards, .row-down_c .connection{
+
+  .row-mid_c .contact-cards, .row-down_c .connection {
     flex-direction: column;
   }
-  .connection{
+
+  .connection {
     width: 100%;
   }
-  .contact-cards{
+
+  .contact-cards {
     width: 100%;
     align-items: center;
   }
-  .contact-card{
+
+  .contact-card {
     width: 90%;
     margin: 10px 0;
   }
-  .image_c, .content_c{
+
+  .image_c, .content_c {
     width: 100%;
   }
-  .image_c img{
+
+  .image_c img {
     width: 90%;
   }
-  .container-footer{
+
+  .container-footer {
     flex-direction: column;
   }
-  .container-footer .row-mid, .container-footer .row-bottom{
+
+  .container-footer .row-mid, .container-footer .row-bottom {
     flex-direction: column;
   }
-  .newsleters{
+
+  .newsleters {
     width: 100%;
   }
-  .container-footer .row-mid{
+
+  .container-footer .row-mid {
     text-align: left;
     align-items: flex-start;
   }
-  .row-mid .links{
+
+  .row-mid .links {
     flex-direction: column;
   }
-  

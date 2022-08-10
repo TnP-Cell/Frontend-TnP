@@ -61,7 +61,7 @@
   display: block;
   width: 100%;
   height: 1.6px;
-  background-color: #4e4e4e;
+  background-color: #E9BD43;
   margin-top: 10px;
 }
 
@@ -77,12 +77,12 @@
   margin-top: 20px 1%;
 }
 
-.logo-grid::after {
+.title-line {
   content: '';
   display: block;
-  width: 100%;
-  height: 1.6px;
-  background-color: #4e4e4e;
+  width: 25%;
+  height: 1.5px;
+  background-color: #5c5c5ca5;
   margin-top: 10px;
 }
 
@@ -166,13 +166,15 @@
   justify-content: center;
 }
 
-.grid-all-list {
+.logo-grid-all {
   width: 100%;
   height: auto;
+}
+
+.grid-all-list {
   display: grid;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   padding: 2% 5%;
   align-items: flex-start;
   margin-top: 20px 1%;
@@ -184,4 +186,33 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.alpha-title {
+  width: 50px;
+  height: 50px;
+  box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
+  border-radius: 20px;
+  margin: 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #4e4e4e;
+}
+.alpha-title:hover{
+  background: rgb(234, 194, 16);
+  color: white;
+}
+
+.grid-all-item h4 {
+  margin-left: 3vw;
+  font-family: sans-serif;
+  color: #4e4e4e;
+  font-size: 16px;
+}
+
+.grid-all-item h4:hover{
+  color: rgb(228, 187, 0);
 }
