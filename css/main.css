@@ -989,7 +989,10 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 }
-
+.footer .logo img{
+  width: 100px;
+  height: auto;
+}
 .row-mid {
   padding: 10px 40px;
   margin: 20px;
