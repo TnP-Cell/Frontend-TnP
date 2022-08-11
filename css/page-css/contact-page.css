@@ -48,3 +48,7 @@
     justify-content: space-around;
     margin: 2% 3%;
 }
+
+.team-grid .team-card .card-img img {
+    border-radius: 50%;
+}
