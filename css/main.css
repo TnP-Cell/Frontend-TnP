@@ -932,7 +932,7 @@ button:hover {
 }
 
 .image_c img {
-  max-width: 500px;
+  max-width: 100%;
   border-radius: 0 50px 50px 0;
 }
 
@@ -949,6 +949,7 @@ button:hover {
 }
 
 .buttons {
+  max-width: 300px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -989,6 +990,10 @@ button:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.row-top .buttons{
+  width: fit-content;
 }
 
 .footer .logo img {
@@ -1287,9 +1292,14 @@ button:hover {
     padding: 20px;
   }
 
+  .footer .logo img{
+    width: 50px;
+  }
+
   .row-top .buttons {
     flex-direction: column;
     font-size: 5px;
+    width: fit-content;
     /* padding: 10px; */
     /* height: 10px; */
   }
