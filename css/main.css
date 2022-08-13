@@ -341,7 +341,8 @@ button:hover {
   width: 100%;
 }
 
-.card1-new, .card2-new {
+.card1-new,
+.card2-new {
   box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
   border-radius: 20px;
   height: 80vh;
@@ -989,10 +990,12 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 }
-.footer .logo img{
+
+.footer .logo img {
   width: 100px;
   height: auto;
 }
+
 .row-mid {
   padding: 10px 40px;
   margin: 20px;
@@ -1009,9 +1012,11 @@ button:hover {
   flex-direction: column;
   justify-content: space-between;
 }
-.title-f{
+
+.title-f {
   margin-bottom: 10px;
 }
+
 .newsletters h4 {
   font-family: "Arial";
   color: #4e4e4e;
@@ -1085,11 +1090,11 @@ button:hover {
   padding: 20px;
 }
 
-.phonenav{
+.phonenav {
   display: none;
 }
 
-.pcnav{
+.pcnav {
   width: 90%;
   height: 100%;
   display: flex;
@@ -1134,7 +1139,9 @@ button:hover {
     margin-top: 5vh;
   }
 
-  .text-1, .text-2, .text-3 {
+  .text-1,
+  .text-2,
+  .text-3 {
     text-align: center;
   }
 
@@ -1158,20 +1165,37 @@ button:hover {
     font-size: 20px;
   }
 
+  .options span {
+    font-size: 20px;
+  }
+
+  .active-option::after {
+    width: 100px;
+    height: 2.5px;
+    margin-left: 1.5%;
+  }
+
+  .recruit-txt span {
+    font-size: 18px;
+  }
+
   .row-n {
     flex-direction: column;
   }
 
-  .news, .event {
+  .news,
+  .event {
     width: 100%;
   }
 
-  .news h2, .event h2 {
+  .news h2,
+  .event h2 {
     font-size: 24px;
     margin: 5px;
   }
 
-  .news a, .event a {
+  .news a,
+  .event a {
     font-size: 18px;
   }
 
@@ -1197,7 +1221,8 @@ button:hover {
     max-height: 300px;
   }
 
-  .text-d h3, .text-d a {
+  .text-d h3,
+  .text-d a {
     margin-left: 2%;
   }
 
@@ -1205,11 +1230,13 @@ button:hover {
     width: 40vw;
   }
 
-  .row-down .text, .row-down .image {
+  .row-down .text,
+  .row-down .image {
     width: 100%;
   }
 
-  .row-down .text-d, .row-down .image-d {
+  .row-down .text-d,
+  .row-down .image-d {
     width: 100%;
   }
 
@@ -1218,7 +1245,8 @@ button:hover {
     height: 80px;
   }
 
-  .row-mid_c .contact-cards, .row-down_c .connection {
+  .row-mid_c .contact-cards,
+  .row-down_c .connection {
     flex-direction: column;
   }
 
@@ -1236,7 +1264,8 @@ button:hover {
     margin: 10px 0;
   }
 
-  .image_c, .content_c {
+  .image_c,
+  .content_c {
     width: 100%;
   }
 
@@ -1248,24 +1277,26 @@ button:hover {
     flex-direction: column;
   }
 
-  .container-footer .row-mid, .container-footer .row-bottom {
+  .container-footer .row-mid,
+  .container-footer .row-bottom {
     flex-direction: column;
   }
 
-  .container-footer .row-top{
+  .container-footer .row-top {
     margin: 0px;
     padding: 20px;
   }
 
-  .row-top .buttons{
+  .row-top .buttons {
     flex-direction: column;
-    font-size:5px;
+    font-size: 5px;
     /* padding: 10px; */
     /* height: 10px; */
   }
-.row-top .buttons .btn{
-  font-size: 10px;
-}
+
+  .row-top .buttons .btn {
+    font-size: 10px;
+  }
 
 
   .newsleters {
@@ -1287,13 +1318,15 @@ button:hover {
     justify-content: start;
   }
 
-  .quick-link, .institute-links, .help-links{
+  .quick-link,
+  .institute-links,
+  .help-links {
     /* background-color: black; */
     width: 90%;
     margin-top: 30px;
   }
 
-  .hamburger .menu{
+  .hamburger .menu {
     position: fixed;
     width: 300px;
     top: 1%;
@@ -1305,7 +1338,7 @@ button:hover {
     backdrop-filter: blur(5px);
   }
 
-  .phonenav{
+  .phonenav {
     display: block;
     width: 100%;
     height: 80vh;
@@ -1315,7 +1348,7 @@ button:hover {
     align-items: center;
   }
 
-  .phonenav .menu-item{
+  .phonenav .menu-item {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -1324,23 +1357,64 @@ button:hover {
     height: 30px;
   }
 
-  .phonenav .menu-item a{
+  .phonenav .menu-item a {
     color: #4e4e4e;
   }
 
-  .pcnav{
+  .pcnav {
     display: none;
   }
 
-  .hamburger{
+  .hamburger {
     top: 1%;
     right: 1%;
   }
 
-  .image-d img{
+  .image-d img {
     width: 300px;
   }
+}
 
-  
+@media (max-width: 450px) {
 
+  .register,
+  .contact,
+  .rst,
+  .faq {
+    font-size: 18px;
+  }
+
+  .students-btns,
+  .query-app {
+    margin-top: 5%;
+  }
+
+  .contact-card {
+    align-items: center;
+  }
+
+  .contact-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card-content {
+    padding: 0 10px;
+  }
+
+  .card-content h3 {
+    font-size: 16px;
+  }
+
+  .card-content p {
+    font-size: 12px;
+  }
+
+  .card-content h4 {
+    font-size: 14px;
+  }
+
+  .heading h1 {
+    font-size: 26px;
+  }
 }
