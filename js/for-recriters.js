@@ -2,6 +2,10 @@ var placement = document.querySelector("#placement");
 var facilities = document.querySelector("#facilities");
 var demographics = document.querySelector("#demographics");
 var representatives = document.querySelector("#representatives");
+var placement1 = document.querySelector("#placement1");
+var facilities1 = document.querySelector("#facilities1");
+var demographics1 = document.querySelector("#demographics1");
+var representatives1 = document.querySelector("#representatives1");
 
 var mainContainer = document.querySelectorAll(".main-container");
 var mainContainerMb = document.querySelectorAll(".main-container-mb");
@@ -26,7 +30,8 @@ placement.addEventListener("click", () => {
     buttons[0].classList += " active-button";
   mainContainer[0].style.display = "block";
 });
-placement.addEventListener("click", () => {
+
+placement1.addEventListener("click", () => {
   for (var i = 0; i < mainContainerMb.length; i++) {
     mainContainerMb[i].style.display = "none";
   }
@@ -50,7 +55,7 @@ facilities.addEventListener("click", () => {
   mainContainer[1].style.display = "block";
 });
 
-facilities.addEventListener("click", () => {
+facilities1.addEventListener("click", () => {
   for (var i = 0; i < mainContainerMb.length; i++) {
     mainContainerMb[i].style.display = "none";
   }
@@ -74,7 +79,7 @@ demographics.addEventListener("click", () => {
   mainContainer[2].style.display = "block";
 });
 
-demographics.addEventListener("click", () => {
+demographics1.addEventListener("click", () => {
   for (var i = 0; i < mainContainerMb.length; i++) {
     mainContainerMb[i].style.display = "none";
   }
@@ -98,7 +103,7 @@ representatives.addEventListener("click", () => {
   mainContainer[3].style.display = "block";
 });
 
-representatives.addEventListener("click", () => {
+representatives1.addEventListener("click", () => {
   for (var i = 0; i < mainContainerMb.length; i++) {
     mainContainerMb[i].style.display = "none";
   }
