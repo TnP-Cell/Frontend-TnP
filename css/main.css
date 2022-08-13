@@ -989,10 +989,12 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 }
-.footer .logo img{
+
+.footer .logo img {
   width: 100px;
   height: auto;
 }
+
 .row-mid {
   padding: 10px 40px;
   margin: 20px;
@@ -1009,9 +1011,11 @@ button:hover {
   flex-direction: column;
   justify-content: space-between;
 }
-.title-f{
+
+.title-f {
   margin-bottom: 10px;
 }
+
 .newsletters h4 {
   font-family: "Arial";
   color: #4e4e4e;
@@ -1144,6 +1148,19 @@ button:hover {
     font-size: 20px;
   }
 
+  .options span{
+    font-size: 20px;
+  }
+  .active-option::after{
+    width: 100px;
+    height: 2.5px;
+    margin-left: 1.5%;
+  }
+
+  .recruit-txt span{
+    font-size: 18px;
+  }
+
   .row-n {
     flex-direction: column;
   }
@@ -1250,3 +1267,37 @@ button:hover {
   .row-mid .links {
     flex-direction: column;
   }
+
+}
+
+@media (max-width: 450px) {
+  .register, .contact, .rst, .faq {
+    font-size: 18px;
+  }
+  .students-btns, .query-app{
+    margin-top: 5%;
+  }
+  .contact-card {
+    align-items: center;
+  }
+
+  .contact-card img{
+    width: 120px;
+    height: 120px;
+  }
+  .card-content{
+    padding: 0 10px;
+  }
+  .card-content h3{
+    font-size: 16px;
+  }
+  .card-content p{
+    font-size: 12px;
+  }
+  .card-content h4{
+    font-size: 14px;
+  }
+  .heading h1{
+    font-size: 26px;
+  }
+}
