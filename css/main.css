@@ -1108,7 +1108,7 @@ button:hover {
 /* Responsive: Media Queries*/
 
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .nav-list {
     display: none;
   }
@@ -1157,7 +1157,7 @@ button:hover {
   .users {
     width: 100%;
     margin: auto;
-    height: 30vh;
+    height: fit-content;
     margin-top: 10px;
   }
 
