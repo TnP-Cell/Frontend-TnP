@@ -64,9 +64,31 @@
             <img class="burger" src="./assets\hamburger.svg" alt="hamburger">
             <div class="menu">
                 <div class="menu-items">
-                    <div class="menu-item" onclick="window.open('./login-page.html','_target');">Student Profile</div>
-                    <div class="menu-item" onclick="window.open('./admin-login.html','_target');">Admin Center</div>
-                    <div class="menu-item">Help</div>
+                    <div class="phonenav">
+                        <div class="menu-item">
+                            <a href="#">Home</a>
+                        </div>
+                        <div class="menu-item" id="inst1">
+                            <a href="./institute-page.html">About</a>
+                        </div>
+                        <div class="menu-item" id="recruit1">
+                            <a href="./for-recruiters.html">For Recruiters</a>
+                        </div>
+                        <div class="menu-item" id="people1">
+                            <a href="./contact-page.html">People</a>
+                        </div>
+                        <div class="menu-item">
+                            <a href="https://app.joinsuperset.com/#/s/feed">Superset</a>
+                        </div>
+                        <div class="menu-item" onclick="window.open('./login-page.html','_target');">Student Profile</div>
+                        <div class="menu-item" onclick="window.open('./admin-login.html','_target');">Admin Center</div>
+                        <div class="menu-item">Help</div>
+                    </div>
+                    <div class="pcnav">
+                        <div class="menu-item" onclick="window.open('./login-page.html','_target');">Student Profile</div>
+                        <div class="menu-item" onclick="window.open('./admin-login.html','_target');">Admin Center</div>
+                        <div class="menu-item">Help</div>
+                    </div>
                 </div>
                 <img class="cross" src="./assets\cross.svg" alt="cross">
             </div>
@@ -101,13 +123,14 @@
                             </div>
                             <div class="recruit-btns">
                                 <button class="register">Register now</button>
-                                <button class="contact">Contact</button>
+                                <button class="contact" onclick="window.location.href='#contact-now'">Contact</button>
                             </div>
                         </div>
                         <div class="students fade">
                             <div class="students-btns">
-                                <button class="rst">Resume Template</button>
-                                <!-- link:https://www.overleaf.com/read/shmxpnswwyfw -->
+                                <button class="rst"
+                                    onclick="window.open('./assets/Student_IIIT_Bhagalpur_CV.docx');">Resume
+                                    Template</button>
                                 <button class="faq">FAQ</button>
                             </div>
                             <div class="query-app">
@@ -369,7 +392,7 @@
             </div>
         </div>
     </section>
-    <section class="contact-section">
+    <section id="contact-now" class="contact-section">
         <div class="container">
             <div class="row-up">
                 <div class="heading">
@@ -391,8 +414,10 @@
                         <div class="card-content">
                             <h3>Dr. Gaurav Kumar</h3>
                             <p>(Training & Placement fac. Incharge)</p>
-                            <h4><i class="fa-solid fa-phone" aria-hidden="true"></i> +91-74840-55317</h4>
-                            <h4><i class="fa-solid fa-envelope" aria-hidden="true"></i> tnp_fic@iiitbh.ac.in</h4>
+                            <h4><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+917484055317">
+                                    +91-74840-55317</a></h4>
+                            <h4><i class="fa-solid fa-envelope" aria-hidden="true"></i><a
+                                    href="mailto: tnp_fic@iiitbh.ac.in"> tnp_fic@iiitbh.ac.in</a></h4>
                         </div>
                     </div>
                     <div class="contact-card">
@@ -402,8 +427,10 @@
                         <div class="card-content">
                             <h3>Sangeeta Sharma</h3>
                             <p>(Training and Placement Officer)</p>
-                            <h4><i class="fa-solid fa-phone" aria-hidden="true"></i> +91-8962541634</h4>
-                            <h4><i class="fa-solid fa-envelope" aria-hidden="true"></i> tpo@iiitbh.ac.in</h4>
+                            <h4><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+918962541634">
+                                    +91-8962541634</a></h4>
+                            <h4><i class="fa-solid fa-envelope" aria-hidden="true"></i><a
+                                    href="mailto:tpo@iiitbh.ac.in"> tpo@iiitbh.ac.in</a></h4>
                         </div>
                     </div>
                 </div>
@@ -424,7 +451,7 @@
                         <div class="buttons">
                             <button class="btn" onclick="window.open('./contact-page.html','_target');">Visit
                                 now</button>
-                            <a href="#" target="_blank"> Help & Support >></a>
+                            <a href="./contact-page.html" target="_blank"> Help & Support >></a>
                         </div>
                     </div>
                 </div>
@@ -435,7 +462,7 @@
         <div class="container-footer">
             <div class="row-top">
                 <div class="logo">
-                    <a href="./index.html"><img src="./assets\fevicon.svg" alt=""></a>
+                    <img src="./assets/square-logo.png" alt="">
                 </div>
                 <div class="buttons">
                     <a href="#" class="btn btn-primary">Get Started</a>
