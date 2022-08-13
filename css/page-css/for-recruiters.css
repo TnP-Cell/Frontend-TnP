@@ -1,6 +1,7 @@
 .recruiters {
   margin-top: 20px;
 }
+
 .container-fr {
   width: 90%;
   margin: 0 5%;
@@ -8,6 +9,15 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+.container-mobile {
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .main-container {
   width: calc(70% - 20px);
   border-radius: 20px;
@@ -80,18 +90,19 @@
   margin-bottom: 15px;
 }
 
-.card-details-fr ul h2{
+.card-details-fr ul h2 {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
 }
 
-
-.card-details-fr ul img{
+.card-details-fr ul img {
   max-width: 400px;
   height: 230px;
   padding: 10px;
 }
+
+
 
 .side-container {
   width: calc(30% - 20px);
@@ -193,7 +204,7 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
-.contact-info{
+.contact-info {
   margin-top: 5px;
 }
 .side-div-down h3 {
@@ -219,25 +230,42 @@
   font-family: "Arial";
   font-weight: 400;
 }
-.team-grid{
+.team-grid {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 20px;
 }
-.contact-card .card-img{
+.contact-card .card-img {
   align-items: center;
 }
-.map-embed{
+.map-embed {
   width: 94%;
   margin: 3% 3%;
   height: auto;
   border-radius: 0 0 20px 20px;
   outline: 1px solid #e2e2e2;
 }
-.map-embed iframe{
+.map-embed iframe {
   width: 100%;
   height: 100%;
   border-radius: 0 0 20px 20px;
+}
+
+@media (max-width: 992px) {
+  .container-fr:nth-child(2) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-fr:nth-child(1) {
+    display: none;
+  }
+  .main-container {
+    width: 100%;
+  }
+  .side-container {
+    width: 100%;
+  }
 }
