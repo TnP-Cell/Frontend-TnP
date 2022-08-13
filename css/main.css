@@ -98,8 +98,8 @@ img {
   position: absolute;
   right: 1%;
   z-index: 20;
-  width: 18vw;
-  height: 26vh;
+  width: 22vw;
+  height: 30vh;
   background-color: #fff;
   box-shadow: 2px 4px 20px 10px rgba(186, 186, 186, 0.2);
   border-radius: 20px 0 20px 20px;
@@ -948,7 +948,7 @@ button:hover {
 }
 
 .buttons {
-  width: 300px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1084,6 +1084,20 @@ button:hover {
   text-align: center;
   padding: 20px;
 }
+
+.phonenav{
+  display: none;
+}
+
+.pcnav{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 
 /*----------------------------------*/
 /* Responsive: Media Queries*/
@@ -1238,15 +1252,95 @@ button:hover {
     flex-direction: column;
   }
 
+  .container-footer .row-top{
+    margin: 0px;
+    padding: 20px;
+  }
+
+  .row-top .buttons{
+    flex-direction: column;
+    font-size:5px;
+    /* padding: 10px; */
+    /* height: 10px; */
+  }
+.row-top .buttons .btn{
+  font-size: 10px;
+}
+
+
   .newsleters {
     width: 100%;
+    margin: auto;
+    text-align: center;
   }
 
   .container-footer .row-mid {
     text-align: left;
     align-items: flex-start;
+    margin: 5px;
+    padding: 0px;
   }
 
   .row-mid .links {
     flex-direction: column;
+    width: calc(90%);
+    justify-content: start;
   }
+
+  .quick-link, .institute-links, .help-links{
+    /* background-color: black; */
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .hamburger .menu{
+    position: fixed;
+    width: 300px;
+    top: 1%;
+    /* left: 0%; */
+    right: 1%;
+    height: 98vh;
+    /* background-color: black; */
+    background-color: rgba(255, 255, 255, 0.899);
+    backdrop-filter: blur(5px);
+  }
+
+  .phonenav{
+    display: block;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .phonenav .menu-item{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding: 2%;
+    height: 30px;
+  }
+
+  .phonenav .menu-item a{
+    color: #4e4e4e;
+  }
+
+  .pcnav{
+    display: none;
+  }
+
+  .hamburger{
+    top: 1%;
+    right: 1%;
+  }
+
+  .image-d img{
+    width: 300px;
+  }
+
+  
+
+}
