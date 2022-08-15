@@ -1283,8 +1283,17 @@ button:hover {
   }
 
   .container-footer .row-mid,
-  .container-footer .row-bottom {
+  .container-footer {
     flex-direction: column;
+  }
+
+  .container-footer .row-bottom{
+    flex-direction: column-reverse;
+    padding: 5px;
+    margin: 10px 5px;
+  }
+  .copyright p{
+    padding: 20px 0;
   }
 
   .container-footer .row-top {
