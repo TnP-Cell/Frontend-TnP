@@ -19,7 +19,7 @@ const arrayBufferToBase64 = (buffer) => {
 };
 
 function display(data) {
-  console.log(data);
+  // console.log(data);
   document.title = `${data.name} | Profile`;
   names.forEach((n) => {
     n.innerHTML = data.name;
@@ -61,7 +61,7 @@ fetch(`${url}/api/showProfile`, {
 })
   .then((res) => res.json())
   .then((data) => {
-    console.log(data.status);
+    // console.log(data.status);
     display(data.data);
   })
   .catch((err) => {
