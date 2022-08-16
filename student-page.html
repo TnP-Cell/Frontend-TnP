@@ -53,51 +53,8 @@
 
 <body>
     <section class="student-page">
-        <div class="side-container">
-            <div class="profile">
-                <div class="profile-img">
-                    <img src="./assets/blank-profile-picture-973460.svg" alt="img" id="profile-pic">
-                </div>
-                <div class="profile-name">
-                    <h3>
-                        <span class="name"></span>
-                    </h3>
-                    <p>Branch: <span>
-                            <span class="branch"></span>
-                        </span></p>
-                    <p>Roll: <span>
-                            <span class="roll"></span>
-                        </span></p>
-                    <p>Cgpa: <span>
-                            <span class="cgpa"></span>
-                        </span></p>
-                </div>
-            </div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Contact:</h3>
-                    <i class="fa fa-phone"></i>
-                    <p>
-                        <span class="phone"></span>
-                    </p>
-                    <i class="fa fa-envelope"></i>
-                    <p>
-                        <span class="email"></span>
-                    </p>
-                </div>
-            </div>
-            <div class="social-bar">
-                <h3>Other Profiles:</h3>
-                <div class="social-item" id="linkedin">
-                    <!-- <a href="<%#=result.linkedin%>"><i class="fa fa-linkedin"></i> LinkedIn</a> -->
-                </div>
-                <div class="social-item" id="github">
-                    <!-- <a href="<%#=result.github%>"><i class="fa fa-github"></i> GitHub</a> -->
-                </div>
-            </div>
-        </div>
-        <div class="main-container">
-            <div class="top-div">
+        <div class="out-container">
+            <div class="mob-nav-div">
                 <div class="back-button">
                     <a href="./index.html">Go Back</a>
                 </div>
@@ -105,13 +62,66 @@
                     <img src="./assets\Screenshot 2022-04-10 235928.png" alt="">
                 </div>
             </div>
-            <div class="bottom-div">
-                <div class="resume">
-                    <!-- attach resume preview here -->
-                    <!-- <iframe
+            <div class="side-container">
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="./assets/blank-profile-picture-973460.svg" alt="img" id="profile-pic">
+                    </div>
+                    <div class="profile-name">
+                        <h3>
+                            <span class="name"></span>
+                        </h3>
+                        <p>Branch: <span>
+                                <span class="branch"></span>
+                            </span></p>
+                        <p>Roll: <span>
+                                <span class="roll"></span>
+                            </span></p>
+                        <p>Cgpa: <span>
+                                <span class="cgpa"></span>
+                            </span></p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Contact:</h3>
+                        <i class="fa fa-phone"></i>
+                        <p>
+                            <span class="phone"></span>
+                        </p>
+                        <i class="fa fa-envelope"></i>
+                        <p>
+                            <span class="email"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="social-bar">
+                    <h3>Other Profiles:</h3>
+                    <div class="social-item" id="linkedin">
+                        <!-- <a href="<%#=result.linkedin%>"><i class="fa fa-linkedin"></i> LinkedIn</a> -->
+                    </div>
+                    <div class="social-item" id="github">
+                        <!-- <a href="<%#=result.github%>"><i class="fa fa-github"></i> GitHub</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="top-div">
+                    <div class="back-button">
+                        <a href="./index.html">Go Back</a>
+                    </div>
+                    <div class="institute-logo">
+                        <img src="./assets\Screenshot 2022-04-10 235928.png" alt="">
+                    </div>
+                </div>
+                <div class="bottom-div">
+                    <div class="resume">
+                        <!-- attach resume preview here -->
+                        <!-- <iframe
                         src="data:application/<%#=result.resume.contentType%>;base64,<%#=result.resume.data.toString('base64')%>#toolbar=0&view=fill"
                         scrolling="no" frameborder="0" seamless="seamless" id="profile">
                     </iframe> -->
+                    </div>
                 </div>
             </div>
         </div>
