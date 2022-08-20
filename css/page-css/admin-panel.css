@@ -251,6 +251,7 @@ img {
 .time, .h-text, .update-btn, .delete-btn {
     background: #FFFFFF;
     border: 2px solid #999999;
+    height: 100%;
 }
 
 .time{
@@ -272,7 +273,7 @@ img {
 }
 .h-text{
     width: calc(60% - 60px);
-    height: auto;
+    height: 100%;
     border-radius: 20px;
     align-items: center;
     overflow-x: hidden;
@@ -280,13 +281,14 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    word-wrap: break-word;
 }
 .h-text a{
     text-align: center;
     font-size: 20px;
     padding: 2%;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    height: auto;
 }
 .update-btn{
     width: 160px;
