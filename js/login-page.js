@@ -46,7 +46,7 @@ document.forms["registerForm"].addEventListener("submit", (e) => {
     method: "POST",
     body: new FormData(e.target),
   })
-    .then((res) => res.json())
+    .then((res) => res.text())
     .then((data) => {
       if (data.status == 0) {
         alert("Registered Successfully");

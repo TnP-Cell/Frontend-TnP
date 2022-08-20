@@ -252,6 +252,9 @@
 .contact-card .card-img {
   align-items: center;
 }
+.team-card .card-img img {
+  border-radius: 50%;
+}
 .map-embed {
   width: 94%;
   margin: 3% 3%;
