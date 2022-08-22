@@ -10,6 +10,7 @@ var linkedin = document.querySelector("#linkedin");
 var github = document.querySelector("#github");
 var resume = document.querySelector(".resume");
 var profilePic = document.querySelector("#profile-pic");
+var logout = document.querySelector("#logout");
 
 const arrayBufferToBase64 = (buffer) => {
   var binary = "";
@@ -67,3 +68,8 @@ fetch(`${url}/api/showProfile`, {
   .catch((err) => {
     alert("Something Went Wrong!!" + err);
   });
+
+logout.addEventListener("click", () => {
+  localStorage.removeItem("token");
+  window.location.href = "./index.html";
+});
