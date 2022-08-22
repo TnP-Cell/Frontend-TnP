@@ -1,7 +1,8 @@
 var submitProf = document.querySelector("#subprof");
 var contentDivs = document.querySelectorAll(".content-div");
 var check = 1;
-var url = "https://tpc-iiitbh.herokuapp.com";
+const url = "https://tpc-iiitbh.herokuapp.com";
+// var url = "http://localhost:5000";
 
 contentDivs[1].style.display = "none";
 
@@ -46,7 +47,7 @@ document.forms["registerForm"].addEventListener("submit", (e) => {
     method: "POST",
     body: new FormData(e.target),
   })
-    .then((res) => res.text())
+    .then((res) => res.json())
     .then((data) => {
       if (data.status == 0) {
         alert("Registered Successfully");
