@@ -1,4 +1,4 @@
-var url = "https://tpc-iiitbh.herokuapp.com";
+const url = "https://tpc-iiitbh.herokuapp.com";
 // var url = "http://localhost:5000";
 
 var newsHistory = document.querySelector("#news-history");
@@ -10,6 +10,8 @@ var eventsAddBtn = document.querySelector("#events-ab");
 var newsImg = document.querySelector("#news-img");
 var eventsImg = document.querySelector("#events-img");
 var backBtn = document.querySelector("#b-btn");
+var imgUpd = document.querySelector("#img-upd");
+var imgShow = document.querySelector("#img-show");
 
 eventsAdd.style.display = "none";
 
@@ -25,6 +27,13 @@ eventsAddBtn.addEventListener("click", () => {
   newsImg.src = "./assets/option-icon-inactive.svg";
   eventsAdd.style.display = "block";
   newsAdd.style.display = "none";
+});
+
+imgUpd.addEventListener("change", (e) => {
+  imgShow.src = URL.createObjectURL(e.target.files[0]);
+});
+imgShow.addEventListener("load", () => {
+  URL.revokeObjectURL(imgShow.src);
 });
 
 document.forms["news-add"].addEventListener("submit", (e) => {
@@ -76,6 +85,26 @@ document.forms["events-add"].addEventListener("submit", (e) => {
       alert("Error: " + err);
     });
 });
+
+document.forms["image-add"].addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(`${url}/api/admin/carouselUpload`, {
+    method: "POST",
+    headers: {
+      auth_token: `${localStorage.getItem("adminToken")}`,
+    },
+    body: new FormData(e.target),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status == 0) alert("Images Uploaded Successfully");
+      else alert("Something Went Wrong!!");
+    })
+    .catch((err) => {
+      alert(err);
+    });
+});
+
 const months = [
   "January",
   "February",
@@ -93,7 +122,7 @@ const months = [
 
 const displayNews = (data) => {
   var html = ``;
-  for (var i=data.length-1;i>=0;i--) {
+  for (var i = data.length - 1; i >= 0; i--) {
     html += `<div class="h-item">
         <div class="time">
             <h3>${data[i].date}</h3>
@@ -123,7 +152,7 @@ const displayNews = (data) => {
 const displayEvents = (data) => {
   // console.log(data)
   var html = ``;
-  for (var i=data.length-1;i>=0;i--) {
+  for (var i = data.length - 1; i >= 0; i--) {
     html += `<div class="h-item">
         <div class="time">
             <h3>${data[i].date}</h3>
