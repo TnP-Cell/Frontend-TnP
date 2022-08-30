@@ -139,15 +139,31 @@ const displayNews = (data) => {
             }">Update</button>
         </div>
         <div class="delete-btn">
-            <button class="add-button" id="delete-data" value="${
+            <button class="add-button" onclick="deleteNews(${
               data[i]._id
-            }">Delete</button>
+            });">Delete</button>
         </div>
     </div>`;
   }
   // console.log(html);
   newsHistory.innerHTML = html;
 };
+
+function deleteNews(id) {
+  console.log(id);
+  fetch(`${url}/api/news/deleteNews`, {
+    method: "POST",
+    body: `${id}`,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status == 0) alert("News Deleted Successfully");
+      else alert("Something Went Wrong!!");
+    })
+    .catch((err) => {
+      alert(err);
+    });
+}
 
 const displayEvents = (data) => {
   // console.log(data)
@@ -169,15 +185,31 @@ const displayEvents = (data) => {
             }">Update</button>
         </div>
         <div class="delete-btn">
-            <button class="add-button" id="delete-data" value="${
+            <button class="add-button" onclick="deleteEvents(${
               data[i]._id
-            }">Delete</button>
+            })">Delete</button>
         </div>
     </div>`;
   }
   // console.log(html);
   eventsHistory.innerHTML = html;
 };
+
+function deleteEvents(id) {
+  console.log(id);
+  fetch(`${url}/api/events/deleteEvents`, {
+    method: "POST",
+    body: `${id}`,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status == 0) alert("Event Deleted Successfully");
+      else alert("Something Went Wrong!!");
+    })
+    .catch((err) => {
+      alert(err);
+    });
+}
 
 const displayData = (data) => {
   document.title = `Welcome !! ${data.name} | ${data.post}`;
