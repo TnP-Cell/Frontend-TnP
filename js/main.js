@@ -12,6 +12,8 @@ var nav = document.querySelectorAll(".nav-dropdown");
 var newsItems = document.querySelector(".news-items");
 var eventItems = document.querySelector(".event-items");
 
+var carouselContainer = document.querySelector(".carousel-container");
+
 let flag = 0;
 
 // inst.addEventListener("mouseover", () => {
@@ -158,6 +160,15 @@ flipper[1].addEventListener("click", () => {
   card2.style.display = "none";
   card1.style.display = "block";
 });
+
+// const displayImages = (data) => {
+//   var html = "";
+//   for (var i = data.length - 1; i >= 0; i--) {
+//     html += `<div class="carousel-item">
+//       <img src="./assets\carousel-img-1.png" alt="img-1">
+//     </div>`;
+//   }
+// };
 
 const displayNews = (data) => {
   // console.log(21);
