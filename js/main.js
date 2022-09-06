@@ -214,7 +214,7 @@ const fetchNewsData = () => {
       displayNews(data.data);
     })
     .catch((err) => {
-      alert("Something Went Wrong!!" + err);
+      alert("Check your Internet Connection");
     });
 };
 
@@ -231,7 +231,7 @@ const fetchEventsData = () => {
       displayEvents(data.data);
     })
     .catch((err) => {
-      alert("Something Went Wrong!!" + err);
+      alert("Check your Internet Connection");
     });
 };
 
