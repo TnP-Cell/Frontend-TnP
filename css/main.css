@@ -146,7 +146,7 @@ img {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #E9BD43;
+  background: #e9bd43;
   border-radius: 40px;
 }
 
@@ -253,8 +253,8 @@ img {
 
 .register {
   outline: none;
-  border: 2px solid #E9BD43;
-  background-color: #E9BD43;
+  border: 2px solid #e9bd43;
+  background-color: #e9bd43;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 100%;
   padding: 2% 5%;
@@ -267,13 +267,13 @@ img {
 .register:hover {
   cursor: pointer;
   background-color: #fff;
-  color: #E9BD43;
+  color: #e9bd43;
 }
 
 .rst {
   outline: none;
-  border: 2px solid #E9BD43;
-  background-color: #E9BD43;
+  border: 2px solid #e9bd43;
+  background-color: #e9bd43;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 100%;
   padding: 5% 5%;
@@ -286,12 +286,12 @@ img {
 .rst:hover {
   cursor: pointer;
   background-color: #fff;
-  color: #E9BD43;
+  color: #e9bd43;
 }
 
 .contact {
   outline: none;
-  border: 2px solid #E9BD43;
+  border: 2px solid #e9bd43;
   background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 100%;
@@ -301,10 +301,9 @@ img {
   color: #4e4e4e;
 }
 
-
 .faq {
   outline: none;
-  border: 2px solid #E9BD43;
+  border: 2px solid #e9bd43;
   background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 100%;
@@ -432,10 +431,10 @@ button:hover {
   border-radius: 20px;
   height: 30vh;
   width: 100%;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
-.inner-card:hover{
+.inner-card:hover {
   cursor: pointer;
   transform: scale(1.05);
   box-shadow: 2px 4px 20px 10px rgba(117, 167, 179, 0.31);
@@ -573,9 +572,41 @@ button:hover {
   font-weight: 600;
 }
 
+.news-content,
+.event-content {
+  height: 200px;
+  overflow: hidden;
+}
+
+.news-items:nth-child(1){
+  animation: autoScroll 10s linear infinite;
+}
+
+.news-items:nth-child(2) {
+  animation: autoScroll1 10s linear infinite;
+  animation-delay:5s;
+}
+
 .news-item-content,
 .event-item-content {
   padding: 10px;
+}
+
+@keyframes autoScroll {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes autoScroll1 {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-200%);
+  }
 }
 
 .about {
@@ -924,7 +955,6 @@ button:hover {
 .image_c {
   align-items: left;
   width: calc(40%);
-
 }
 
 .content_c {
@@ -967,8 +997,8 @@ button:hover {
 .buttons .btn {
   border: none;
   border-radius: 20px;
-  background-color: #E9BD43;
-  border: #E9BD43 1.5px solid;
+  background-color: #e9bd43;
+  border: #e9bd43 1.5px solid;
   padding: 10px 20px;
   font-size: 14px;
   font-weight: bold;
@@ -977,7 +1007,7 @@ button:hover {
 
 .buttons .btn:hover {
   background-color: transparent;
-  color: #E9BD43;
+  color: #e9bd43;
 }
 
 .container-footer {
@@ -999,7 +1029,7 @@ button:hover {
   align-items: center;
 }
 
-.row-top .buttons{
+.row-top .buttons {
   width: fit-content;
 }
 
@@ -1049,15 +1079,15 @@ button:hover {
 }
 
 .newsleters input:focus {
-  outline: 2px solid #E9BD43;
+  outline: 2px solid #e9bd43;
 }
 
 .newsleters button {
   width: 100px;
   padding: 8px 0;
-  border: 2px solid #E9BD43;
+  border: 2px solid #e9bd43;
   border-radius: 0px 20px 20px 0px;
-  background: #E9BD43;
+  background: #e9bd43;
   color: #ffffff;
   font-size: 14px;
   font-family: "Arial";
@@ -1066,8 +1096,8 @@ button:hover {
 }
 
 .newsleters button:hover {
-  color: #E9BD43;
-  border: 2px solid #E9BD43;
+  color: #e9bd43;
+  border: 2px solid #e9bd43;
   background: #fcfcfc;
 }
 
@@ -1115,10 +1145,8 @@ button:hover {
   align-items: center;
 }
 
-
 /*----------------------------------*/
 /* Responsive: Media Queries*/
-
 
 @media (max-width: 992px) {
   .nav-list {
@@ -1294,12 +1322,12 @@ button:hover {
     flex-direction: column;
   }
 
-  .container-footer .row-bottom{
+  .container-footer .row-bottom {
     flex-direction: column-reverse;
     padding: 5px;
     margin: 10px 5px;
   }
-  .copyright p{
+  .copyright p {
     padding: 20px 0;
   }
 
@@ -1308,7 +1336,7 @@ button:hover {
     padding: 20px;
   }
 
-  .footer .logo img{
+  .footer .logo img {
     width: 50px;
   }
 
@@ -1323,7 +1351,6 @@ button:hover {
   .row-top .buttons .btn {
     font-size: 10px;
   }
-
 
   .newsleters {
     width: 100%;
@@ -1402,7 +1429,6 @@ button:hover {
 }
 
 @media (max-width: 450px) {
-
   .register,
   .contact,
   .rst,

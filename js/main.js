@@ -9,7 +9,7 @@ var cross = document.querySelector(".cross");
 var menu = document.querySelector(".menu");
 
 var nav = document.querySelectorAll(".nav-dropdown");
-var newsItems = document.querySelector(".news-items");
+var newsItems = document.querySelectorAll(".news-items");
 var eventItems = document.querySelector(".event-items");
 
 var carouselContainer = document.querySelector(".carousel-container");
@@ -173,7 +173,7 @@ flipper[1].addEventListener("click", () => {
 const displayNews = (data) => {
   // console.log(21);
   var html = "";
-  for (var i in data) {
+  for (var i=data.length-1;i>=0;i--) {
     html += `<div class="news-item-content">
     <h3>
         <a href="${data[i].news.link}">${data[i].news.desc}<span>
@@ -183,12 +183,13 @@ const displayNews = (data) => {
     </h3>
 </div>`;
   }
-  newsItems.innerHTML = html;
+  newsItems[0].innerHTML = html;
+  newsItems[1].innerHTML = html;
 };
 
 const displayEvents = (data) => {
   var html = "";
-  for (var i in data) {
+  for (var i=data.length-1;i>=0;i--) {
     html += `<div class="event-item-content">
     <h3>
         <a href="${data[i].events.link}">${data[i].events.desc}<span>
