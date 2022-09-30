@@ -12,7 +12,12 @@ var nav = document.querySelectorAll(".nav-dropdown");
 var newsItems = document.querySelectorAll(".news-items");
 var eventItems = document.querySelector(".event-items");
 
-var carouselContainer = document.querySelector(".carousel-container");
+var carouselContainer = document.querySelector("#carousel-img");
+
+setTimeout(() => {
+  document.querySelector(".loader").style.display = "none";
+  document.querySelector(".after-load").style.display = "block";
+}, 6000);
 
 let flag = 0;
 
@@ -92,38 +97,8 @@ cross.addEventListener("click", () => {
 //   nav[2].style.display = "none";
 // });
 
-var carouselItem = document.querySelectorAll(".carousel-item");
-
 var prev = document.querySelector("#prev");
 var next = document.querySelector("#next");
-
-var slideIndex = 1;
-displaySlides(slideIndex);
-
-// slideChanger();
-
-// function slideChanger() {
-//   prev.addEventListener("click", () => {
-//     displaySlides(slideIndex-=1);
-//   });
-
-//   next.addEventListener("click", () => {
-//     displaySlides(slideIndex+=1);
-//   });
-// }
-
-setInterval("displaySlides(slideIndex+=1)", 3750);
-
-function displaySlides(n) {
-  if (n > carouselItem.length) slideIndex = 1;
-  if (n < 1) slideIndex = carouselItem.length;
-  for (let i = 0; i < carouselItem.length; i++) {
-    carouselItem[i].style.display = "none";
-    carouselItem[i].style.transition = "3.75s ease-out";
-  }
-  carouselItem[slideIndex - 1].style.display = "block";
-  carouselItem[slideIndex - 1].style.transition = "3.75s ease-in";
-}
 
 var recruit = document.querySelector("#recruit");
 var students = document.querySelector("#students");
@@ -161,19 +136,65 @@ flipper[1].addEventListener("click", () => {
   card1.style.display = "block";
 });
 
-// const displayImages = (data) => {
-//   var html = "";
-//   for (var i = data.length - 1; i >= 0; i--) {
-//     html += `<div class="carousel-item">
-//       <img src="./assets\carousel-img-1.png" alt="img-1">
-//     </div>`;
-//   }
-// };
+const arrayBufferToBase64 = (buffer) => {
+  var binary = "";
+  var bytes = [].slice.call(new Uint8Array(buffer));
+  bytes.forEach((b) => (binary += String.fromCharCode(b)));
+  return window.btoa(binary);
+};
+
+function displayImages(data) {
+  var html = "";
+  // console.log(data.images.length);
+  var x = data.images;
+  // console.log(x.length);
+  for (var i in x) {
+    html += `<div class="carousel-item">
+      <img src="data:image/png;base64,${arrayBufferToBase64(
+        x[i].img.data.data
+      ).toString("base64")}">
+    </div>`;
+  }
+  carouselContainer.innerHTML = html;
+  // console.log(html);
+
+  var carouselItem = document.querySelectorAll(".carousel-item");
+
+  var slideIndex = 1;
+  function displaySlides(n) {
+    if (n > carouselItem.length) slideIndex = 1;
+    if (n < 1) slideIndex = carouselItem.length;
+    for (let i = 0; i < carouselItem.length; i++) {
+      carouselItem[i].style.display = "none";
+      carouselItem[i].style.transition = "3.75s ease-out";
+    }
+    carouselItem[slideIndex - 1].style.display = "block";
+    carouselItem[slideIndex - 1].style.transition = "3.75s ease-in";
+  }
+  displaySlides(slideIndex);
+
+  // slideChanger();
+
+  // function slideChanger() {
+  //   prev.addEventListener("click", () => {
+  //     displaySlides(slideIndex-=1);
+  //   });
+
+  //   next.addEventListener("click", () => {
+  //     displaySlides(slideIndex+=1);
+  //   });
+  // }
+
+  setInterval(() => {
+    slideIndex += 1;
+    displaySlides(slideIndex);
+  }, 3750);
+}
 
 const displayNews = (data) => {
   // console.log(21);
   var html = "";
-  for (var i=data.length-1;i>=0;i--) {
+  for (var i = data.length - 1; i >= 0; i--) {
     html += `<div class="news-item-content">
     <h3>
         <a href="${data[i].news.link}">${data[i].news.desc}<span>
@@ -189,7 +210,7 @@ const displayNews = (data) => {
 
 const displayEvents = (data) => {
   var html = "";
-  for (var i=data.length-1;i>=0;i--) {
+  for (var i = data.length - 1; i >= 0; i--) {
     html += `<div class="event-item-content">
     <h3>
         <a href="${data[i].events.link}">${data[i].events.desc}<span>
@@ -200,6 +221,22 @@ const displayEvents = (data) => {
 </div>`;
   }
   eventItems.innerHTML = html;
+};
+
+const fetchImages = () => {
+  fetch(`${url}/api/admin/carouselShow`, {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      displayImages(data.data);
+    })
+    .catch((err) => {
+      alert("Check your Internet Connection");
+    });
 };
 
 const fetchNewsData = () => {
@@ -238,3 +275,7 @@ const fetchEventsData = () => {
 
 fetchEventsData();
 fetchNewsData();
+fetchImages();
+
+// var script = document.getElementById("second");
+// script.setAttribute("src", script.getAttribute("data-src"));

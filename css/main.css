@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   outline: none;
 }
 
@@ -16,6 +16,82 @@ a {
 img {
   vertical-align: middle;
   max-width: 100%;
+}
+
+.after-load {
+  display: none;
+}
+
+.loader {
+  margin: 0;
+  display: flex;
+  background-color: #1a1940;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 153, 212, 0) calc(15% + 100px),
+    rgba(0, 99, 138, 0) calc(85% + 100px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
+
+.loader .container {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loader div > div {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 100%;
+  margin: 2vw;
+  background-image: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  animation: bounce 1.5s 0.5s linear infinite;
+}
+
+.loader .yellow {
+  background-color: #feb60a;
+}
+
+.loader .red {
+  background-color: #ff0062;
+  animation-delay: 0.1s;
+}
+
+.loader .blue {
+  background-color: #00dbf9;
+  animation-delay: 0.2s;
+}
+
+.loader .violet {
+  background-color: #da00f7;
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+  0%,
+  50%,
+  100% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  25% {
+    transform: scale(0.6);
+    filter: blur(3px);
+  }
+  75% {
+    filter: blur(3px);
+    transform: scale(1.4);
+  }
 }
 
 .navbar {
@@ -578,13 +654,13 @@ button:hover {
   overflow: hidden;
 }
 
-.news-items:nth-child(1){
+.news-items:nth-child(1) {
   animation: autoScroll 10s linear infinite;
 }
 
 .news-items:nth-child(2) {
   animation: autoScroll1 10s linear infinite;
-  animation-delay:5s;
+  animation-delay: 5s;
 }
 
 .news-item-content,
@@ -1148,7 +1224,7 @@ button:hover {
 /*----------------------------------*/
 /* Responsive: Media Queries*/
 
-@media (max-width: 992px) {
+@media (max-width: 1350px) {
   .nav-list {
     display: none;
   }
@@ -1157,7 +1233,9 @@ button:hover {
     display: block;
     width: 70%;
   }
+}
 
+@media (max-width: 992px) {
   .container-b .row {
     flex-direction: column-reverse;
   }
