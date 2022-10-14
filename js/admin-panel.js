@@ -149,7 +149,8 @@ const displayNews = (data) => {
   newsHistory.innerHTML = html;
 };
 
-function deleteNews(id) {
+function deleteNews(id 
+  ) {
   console.log(id);
   fetch(`${url}/api/news/deleteNews`, {
     method: "POST",
