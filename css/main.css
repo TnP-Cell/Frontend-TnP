@@ -25,13 +25,13 @@ img {
 .loader {
   margin: 0;
   display: flex;
-  background-color: #1a1940;
+  background-color: #f1f1f1;
   background-image: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.15) 0%,
-    rgba(0, 153, 212, 0) calc(15% + 100px),
-    rgba(0, 99, 138, 0) calc(85% + 100px),
-    rgba(0, 0, 0, 0.15) 100%
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(114, 198, 232, 0) calc(15% + 100px),
+    rgba(26, 103, 133, 0) calc(85% + 100px),
+    rgba(68, 68, 68, 0.15) 100%
   );
 }
 
@@ -46,10 +46,10 @@ img {
 }
 
 .loader div > div {
-  width: 3vw;
-  height: 3vw;
+  width: 2.5vw;
+  height: 2.5vw;
   border-radius: 100%;
-  margin: 2vw;
+  margin: 1vw;
   background-image: linear-gradient(
     145deg,
     rgba(255, 255, 255, 0.5) 0%,
@@ -59,22 +59,22 @@ img {
 }
 
 .loader .yellow {
-  background-color: #feb60a;
+  background-color: #f25022;
 }
 
 .loader .red {
-  background-color: #ff0062;
-  animation-delay: 0.1s;
+  background-color: #7fba00;
+  animation-delay: 0.15s;
 }
 
 .loader .blue {
-  background-color: #00dbf9;
-  animation-delay: 0.2s;
+  background-color: #00a4ef;
+  animation-delay: 0.30s;
 }
 
 .loader .violet {
-  background-color: #da00f7;
-  animation-delay: 0.3s;
+  background-color: #ffb900;
+  animation-delay: 0.45s;
 }
 
 @keyframes bounce {
@@ -475,7 +475,7 @@ button:hover {
 .carousel-item img {
   width: 100%;
   height: 100%;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .scroller {
@@ -650,7 +650,7 @@ button:hover {
 
 .news-content,
 .event-content {
-  height: 200px;
+  height: 280px;
   overflow: hidden;
 }
 
@@ -1506,6 +1506,20 @@ button:hover {
 }
 
 @media (max-width: 450px) {
+  .card1-new,
+  .card2-new {
+    height: 75vh;
+  }
+  .card1,
+  .card2 {
+    height: calc(75vh - 40px);
+  }
+  .carousel {
+    height: 33vh;
+  }
+  .carousel-item {
+    height: 30vh;
+  }
   .register,
   .contact,
   .rst,
