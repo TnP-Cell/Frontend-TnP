@@ -17,7 +17,7 @@ var carouselContainer = document.querySelector("#carousel-img");
 setTimeout(() => {
   document.querySelector(".loader").style.display = "none";
   document.querySelector(".after-load").style.display = "block";
-}, 6000);
+}, 3000);
 
 let flag = 0;
 
