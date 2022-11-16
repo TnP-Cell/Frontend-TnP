@@ -14,10 +14,10 @@ var eventItems = document.querySelector(".event-items");
 
 var carouselContainer = document.querySelector("#carousel-img");
 
-setTimeout(() => {
-  document.querySelector(".loader").style.display = "none";
-  document.querySelector(".after-load").style.display = "block";
-}, 3000);
+// setTimeout(() => {
+  document.querySelector(".loader").style.display = "block";
+  // document.querySelector(".after-load").style.display = "block";
+// }, 3000);
 
 let flag = 0;
 
