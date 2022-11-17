@@ -19,7 +19,7 @@ img {
 }
 
 .after-load {
-  display: none;
+  display: block;
 }
 
 .loader {
