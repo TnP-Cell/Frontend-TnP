@@ -678,6 +678,10 @@ button:hover {
   animation-delay: 6s;
 }
 
+.news-items:hover {
+  animation-play-state: paused;
+}
+
 .news-item-content,
 .event-item-content {
   padding: 10px;
