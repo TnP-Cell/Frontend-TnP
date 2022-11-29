@@ -678,9 +678,9 @@ button:hover {
   animation-delay: 6s;
 }
 
-.news-items:hover {
+/* .news-items:hover {
   animation-play-state: paused;
-}
+} */
 
 .news-item-content,
 .event-item-content {
