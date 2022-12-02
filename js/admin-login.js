@@ -1,4 +1,4 @@
-var url = "https://tpc-iiitbh.herokuapp.com";
+var url = "https://oyster-app-i9v66.ondigitalocean.app";
 // var url = "http://localhost:5000";
 
 document.forms["admin-login"].addEventListener("submit", (e) => {

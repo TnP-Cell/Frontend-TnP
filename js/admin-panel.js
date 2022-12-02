@@ -1,4 +1,4 @@
-const url = "https://tpc-iiitbh.herokuapp.com";
+const url = "https://oyster-app-i9v66.ondigitalocean.app";
 // var url = "http://localhost:5000";
 
 var newsHistory = document.querySelector("#news-history");

@@ -1,7 +1,7 @@
 var submitProf = document.querySelector("#subprof");
 var contentDivs = document.querySelectorAll(".content-div");
 var check = 1;
-const url = "https://tpc-iiitbh.herokuapp.com";
+const url = "https://oyster-app-i9v66.ondigitalocean.app";
 // var url = "http://localhost:5000";
 
 contentDivs[1].style.display = "none";
