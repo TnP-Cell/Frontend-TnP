@@ -1,7 +1,7 @@
 var submitProf = document.querySelector("#subprof");
 var contentDivs = document.querySelectorAll(".content-div");
 var check = 1;
-const url = "https://oyster-app-i9v66.ondigitalocean.app";
+const url = "http://194.113.64.156";
 // var url = "http://localhost:5000";
 
 contentDivs[1].style.display = "none";

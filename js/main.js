@@ -1,4 +1,4 @@
-const url = "https://oyster-app-i9v66.ondigitalocean.app";
+const url = "http://194.113.64.156";
 // var url = "http://localhost:5000";
 
 var inst = document.querySelector("#inst1");

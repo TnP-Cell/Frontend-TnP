@@ -1,4 +1,4 @@
-var url = "https://oyster-app-i9v66.ondigitalocean.app";
+var url = "http://194.113.64.156";
 
 var names = document.querySelectorAll(".name");
 var branch = document.querySelectorAll(".branch");

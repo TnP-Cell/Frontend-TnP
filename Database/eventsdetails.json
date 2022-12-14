@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "630110a99268eec62a8636a0"
+  },
+  "name": "Prateek Chandra",
+  "events": {
+    "desc": "📌Placement Insider (Coming Soon...)",
+    "link": ""
+  },
+  "date": "20",
+  "month": "7",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630c4f32d096d7b964285bfb"
+  },
+  "name": "Prateek Chandra",
+  "events": {
+    "desc": "Communication Training Session @ 11 AM (Link)",
+    "link": "http://stream.meet.google.com/stream/934f3f89-1a4f-45e2-b7b4-d310358cfee9"
+  },
+  "date": "29",
+  "month": "7",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630c4f6bd096d7b964285bfe"
+  },
+  "name": "Prateek Chandra",
+  "events": {
+    "desc": "Coding Training Session @ 04 PM (Link)",
+    "link": "http://stream.meet.google.com/stream/9a67cbef-29d4-4c9b-acb2-717dc40a19d8"
+  },
+  "date": "29",
+  "month": "7",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "635a2e252e91e9364835ddbc"
+  },
+  "name": "Prateek Chandra",
+  "events": {
+    "desc": "Interaction session with students who cracked internship opportunity in amazon: 10 AM | 15 Oct",
+    "link": ""
+  },
+  "date": "27",
+  "month": "9",
+  "__v": 0
+}]

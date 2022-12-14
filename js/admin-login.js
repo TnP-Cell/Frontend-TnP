@@ -1,4 +1,4 @@
-var url = "https://oyster-app-i9v66.ondigitalocean.app";
+var url = "http://194.113.64.156";
 // var url = "http://localhost:5000";
 
 document.forms["admin-login"].addEventListener("submit", (e) => {

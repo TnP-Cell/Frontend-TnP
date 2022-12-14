@@ -1,0 +1,133 @@
+[{
+  "_id": {
+    "$oid": "630110479268eec62a863694"
+  },
+  "name": "Prateek Chandra",
+  "news": {
+    "desc": "5 Students selected in Fareportal at 9 LPA",
+    "link": ""
+  },
+  "date": "20",
+  "month": "7",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630110729268eec62a86369a"
+  },
+  "name": "Prateek Chandra",
+  "news": {
+    "desc": "4 Students Selected in Synopsys at 18.9 LPA",
+    "link": ""
+  },
+  "date": "20",
+  "month": "7",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6301116c9268eec62a8636a6"
+  },
+  "name": "Prateek Chandra",
+  "news": {
+    "desc": "2 Students (Praveen and Suraj) selected in Bharat Fuel for 1-Year Internship",
+    "link": ""
+  },
+  "date": "20",
+  "month": "7",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6317035df08ca6f706a2cecf"
+  },
+  "name": "Prateek Chandra",
+  "news": {
+    "desc": "11 Students selected in Nagaro @7 lpa",
+    "link": ""
+  },
+  "date": "6",
+  "month": "8",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "631c1e819fed49f6b109722d"
+  },
+  "name": "Prateek Chandra",
+  "news": {
+    "desc": "✨✨7 Students selected in Amazon @44lpa✨✨",
+    "link": ""
+  },
+  "date": "10",
+  "month": "8",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632ea8187555a87a552070d0"
+  },
+  "name": "Prateek Chandra",
+  "news": {
+    "desc": "2 Students selected as Product Engineers at Loyalty Juggernaut Inc.",
+    "link": ""
+  },
+  "date": "24",
+  "month": "8",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632ea8a87555a87a552070d6"
+  },
+  "name": "Prateek Chandra",
+  "news": {
+    "desc": "PY'23: 3 Students selected in Virtusa",
+    "link": ""
+  },
+  "date": "24",
+  "month": "8",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "635a28642e91e9364835dd9a"
+  },
+  "name": "Prateek Chandra",
+  "news": {
+    "desc": "Bhairav Nath got Placed in SmartCoin @15+ lpa",
+    "link": ""
+  },
+  "date": "27",
+  "month": "9",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "635a289f2e91e9364835dda0"
+  },
+  "name": "Prateek Chandra",
+  "news": {
+    "desc": "2 students (Aditya Dubey & Ishan Nandwal) got placed in A.E. Backend and UI respectively.",
+    "link": ""
+  },
+  "date": "27",
+  "month": "9",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6364fbae68dcd51c32102ced"
+  },
+  "name": "Prateek Chandra",
+  "news": {
+    "desc": "6 Students selected in Reliance JIO Infocomm",
+    "link": ""
+  },
+  "date": "4",
+  "month": "10",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6364fbc968dcd51c32102cf0"
+  },
+  "name": "Prateek Chandra",
+  "news": {
+    "desc": "3 Students selected in SmartCoin @15.5 lpa",
+    "link": ""
+  },
+  "date": "4",
+  "month": "10",
+  "__v": 0
+}]
