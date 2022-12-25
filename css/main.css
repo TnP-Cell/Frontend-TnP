@@ -58,8 +58,6 @@ img {
   color: #003f53;
 }
 
-
-
 /* .loader div > div {
   width: 2.5vw;
   height: 2.5vw;
@@ -1579,4 +1577,50 @@ button:hover {
   .heading h1 {
     font-size: 26px;
   }
+}
+
+.activities {
+  width: 100%;
+  padding: 3%;
+}
+
+.activities .graph {
+  width: 50%;
+}
+
+.activities .detail-timeline {
+  width: 50%;
+}
+
+.top-bar {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.bottom-bar {
+  height: 30px;
+  width: 100%;
+  border-radius: 60px;
+  background-color: #ffff;
+  display: flex;
+}
+
+.bottom-bar div {
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-bar div:nth-child(1) {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.bottom-bar div:last-child {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }

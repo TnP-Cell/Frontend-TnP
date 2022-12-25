@@ -40,8 +40,8 @@ placement1.addEventListener("click", () => {
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].classList.remove("active-button");
   }
-  if (!buttons[0].classList.contains("active-button"))
-    buttons[0].classList += " active-button";
+  if (!placement1.classList.contains("active-button"))
+    placement1.classList += " active-button";
   mainContainerMb[0].style.display = "block";
 });
 
@@ -64,8 +64,8 @@ facilities1.addEventListener("click", () => {
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].classList.remove("active-button");
   }
-  if (!facilities.classList.contains("active-button"))
-    facilities.classList += " active-button";
+  if (!facilities1.classList.contains("active-button"))
+    facilities1.classList += " active-button";
   mainContainerMb[1].style.display = "block";
 });
 
@@ -88,8 +88,8 @@ demographics1.addEventListener("click", () => {
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].classList.remove("active-button");
   }
-  if (!demographics.classList.contains("active-button"))
-    demographics.classList += " active-button";
+  if (!demographics1.classList.contains("active-button"))
+    demographics1.classList += " active-button";
   mainContainerMb[2].style.display = "block";
 });
 
@@ -112,7 +112,7 @@ representatives1.addEventListener("click", () => {
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].classList.remove("active-button");
   }
-  if (!representatives.classList.contains("active-button"))
-    representatives.classList += " active-button";
+  if (!representatives1.classList.contains("active-button"))
+    representatives1.classList += " active-button";
   mainContainerMb[3].style.display = "block";
 });

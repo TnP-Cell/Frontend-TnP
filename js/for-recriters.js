@@ -114,3 +114,52 @@ representatives1.addEventListener("click", () => {
     representatives.classList += " active-button";
   mainContainerMb[3].style.display = "block";
 });
+
+google.charts.load("current", { packages: ["corechart"] });
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  var data1 = google.visualization.arrayToDataTable([
+    ["Branch", "Strength"],
+    ["CSE", 35],
+    ["ECE", 24],
+    ["MeA", 9],
+  ]);
+  var data2 = google.visualization.arrayToDataTable([
+    ["Branch", "Strength"],
+    ["CSE", 52],
+    ["ECE", 48],
+    ["MeA", 18],
+  ]);
+
+  var options1 = {
+    title: "2019-2023 Batch (Branchwise Data)",
+    is3D: true,
+    width: 640,
+    height: 380
+  };
+  var options2 = {
+    title: "2020-2024 Batch (Branchwise Data)",
+    is3D: true,
+    width: 640,
+    height: 380
+  };
+
+  var chart1 = new google.visualization.PieChart(
+    document.getElementById("final1")
+  );
+  var chart2 = new google.visualization.PieChart(
+    document.getElementById("pre-final1")
+  );
+  var chartMob1 = new google.visualization.PieChart(
+    document.getElementById("final-mob1")
+  );
+  var chartMob2 = new google.visualization.PieChart(
+    document.getElementById("pr-final-mob1")
+  );
+
+  chart1.draw(data1, options1);
+  chart2.draw(data2, options2);
+  chartMob1.draw(data1, options1);
+  chartMob2.draw(data2, options2);
+}

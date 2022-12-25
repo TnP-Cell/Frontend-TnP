@@ -11,15 +11,31 @@ var menu = document.querySelector(".menu");
 var nav = document.querySelectorAll(".nav-dropdown");
 var newsItems = document.querySelectorAll(".news-items");
 var eventItems = document.querySelector(".event-items");
+var newsContent = document.querySelector(".news-content");
+
+// var nI1 = document.querySelectorAll(".news-items:nth-child(1)");
+// var nI2 = document.querySelectorAll(".news-items:nth-child(2)");
 
 var carouselContainer = document.querySelector("#carousel-img");
 
 // setTimeout(() => {
-  // document.querySelector(".loader").style.display = "block";
-  // document.querySelector(".after-load").style.display = "block";
+// document.querySelector(".loader").style.display = "block";
+// document.querySelector(".after-load").style.display = "block";
 // }, 3000);
 
 let flag = 0;
+
+newsContent.addEventListener("mouseover", () => {
+  for (var i in newsItems) {
+    newsItems[i].style.animationPlayState = "paused";
+  }
+});
+
+newsContent.addEventListener("mouseout", () => {
+  for (var i in newsItems) {
+    newsItems[i].style.animationPlayState = "running";
+  }
+});
 
 // inst.addEventListener("mouseover", () => {
 //   for (var i = 0; i < nav.length; i++) nav[i].style.display = "none";
@@ -143,16 +159,29 @@ const arrayBufferToBase64 = (buffer) => {
   return window.btoa(binary);
 };
 
-function displayImages(data) {
+function displayImages() {
   var html = "";
   // console.log(data.images.length);
-  var x = data.images;
+  // var x = data.images;
+  var x = [
+    {
+      path: "assets/1.jpg",
+    },
+    {
+      path: "assets/2.jpg",
+    },
+    {
+      path: "assets/3.jpg",
+    },
+    {
+      path: "assets/4.jpg",
+    },
+  ];
+  // console.log(x);
   // console.log(x.length);
   for (var i in x) {
     html += `<div class="carousel-item">
-      <img src="data:image/png;base64,${arrayBufferToBase64(
-        x[i].img.data.data
-      ).toString("base64")}">
+      <img src="${x[i].path}">
     </div>`;
   }
   carouselContainer.innerHTML = html;
@@ -191,6 +220,8 @@ function displayImages(data) {
   }, 3750);
 }
 
+displayImages();
+
 const displayNews = (data) => {
   // console.log(21);
   var html = "";
@@ -224,58 +255,148 @@ const displayEvents = (data) => {
 };
 
 const fetchImages = () => {
-  fetch(`${url}/api/admin/carouselShow`, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-  })
+  // fetch(`${url}/api/admin/carouselShow`, {
+  //   method: "POST",
+  //   headers: {
+  //     "content-type": "application/json",
+  //   },
+  // })
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     displayImages(data.data);
+  //   })
+  //   .catch((err) => {
+  //     alert("Check your Internet Connection");
+  //   });
+  // var data = "../Database/carouselimages.json";
+  // require([data], result => (data = result));
+  fetch("../Database/carouselimages.json")
     .then((res) => res.json())
     .then((data) => {
-      displayImages(data.data);
-    })
-    .catch((err) => {
-      alert("Check your Internet Connection");
+      displayImages(data);
+      // console.log(data);
     });
+  // displayImages(data);
+  // console.log(data);
 };
 
 const fetchNewsData = () => {
   // console.log(1);
-  fetch(`${url}/api/news/newsFetch`, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-  })
+  // fetch(`${url}/api/news/newsFetch`, {
+  //   method: "POST",
+  //   headers: {
+  //     "content-type": "application/json",
+  //   },
+  // })
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     displayNews(data.data);
+  //   })
+  //   .catch((err) => {
+  //     alert("Check your Internet Connection");
+  //   });
+  // var data = "../Database/newsdetails.json";
+  fetch("../Database/newsdetails.json")
     .then((res) => res.json())
     .then((data) => {
-      displayNews(data.data);
-    })
-    .catch((err) => {
-      alert("Check your Internet Connection");
+      displayNews(data);
+      // console.log(data);
     });
+
+  // console.log(data)
 };
 
 const fetchEventsData = () => {
   // console.log(2);
-  fetch(`${url}/api/events/eventsFetch`, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-  })
+  // fetch(`${url}/api/events/eventsFetch`, {
+  //   method: "POST",
+  //   headers: {
+  //     "content-type": "application/json",
+  //   },
+  // })
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     displayEvents(data.data);
+  //   })
+  //   .catch((err) => {
+  //     alert("Check your Internet Connection");
+  //   });
+  // var data = "../Database/eventsdetails.json";
+  fetch("../Database/eventsdetails.json")
     .then((res) => res.json())
     .then((data) => {
-      displayEvents(data.data);
-    })
-    .catch((err) => {
-      alert("Check your Internet Connection");
+      displayEvents(data);
+      // console.log(data);
     });
+
+  // console.log(data)
 };
 
 fetchEventsData();
 fetchNewsData();
-fetchImages();
+// fetchImages();
 
 // var script = document.getElementById("second");
 // script.setAttribute("src", script.getAttribute("data-src"));
+
+var lessThan1 = document.querySelector("#less-than-1");
+var lessThan2 = document.querySelector("#less-than-2");
+var lessThan3 = document.querySelector("#less-than-3");
+var lessThan4 = document.querySelector("#less-than-4");
+var between1 = document.querySelector("#between-1");
+var between2 = document.querySelector("#between-2");
+var between3 = document.querySelector("#between-3");
+var between23 = document.querySelector("#between-2-3");
+var between24 = document.querySelector("#between-2-4");
+var between4 = document.querySelector("#between-4");
+var greaterThan1 = document.querySelector("#greater-than-1");
+var greaterThan2 = document.querySelector("#greater-than-2");
+var greaterThan3 = document.querySelector("#greater-than-3");
+var greaterThan4 = document.querySelector("#greater-than-4");
+
+let data = {
+  lessThan1: "15",
+  lessThan2: "15",
+  lessThan3: "15",
+  lessThan4: "15",
+  between1: "35",
+  between2: "35",
+  between3: "35",
+  between23: "35",
+  between24: "35",
+  between4: "35",
+  greaterThan1: "50",
+  greaterThan2: "50",
+  greaterThan3: "50",
+  greaterThan4: "50",
+};
+
+lessThan1.style.width = data.lessThan1 + "%";
+lessThan2.style.width = data.lessThan2 + "%";
+lessThan3.style.width = data.lessThan3 + "%";
+lessThan4.style.width = data.lessThan4 + "%";
+between1.style.width = data.between1 + "%";
+between2.style.width = data.between2 + "%";
+between3.style.width = data.between3 + "%";
+between23.style.width = data.between23 + "%";
+between24.style.width = data.between24 + "%";
+between4.style.width = data.between4 + "%";
+greaterThan1.style.width = data.greaterThan1 + "%";
+greaterThan2.style.width = data.greaterThan2 + "%";
+greaterThan3.style.width = data.greaterThan3 + "%";
+greaterThan4.style.width = data.greaterThan4 + "%";
+
+lessThan1.style.background = "#FFBC00";
+lessThan2.style.background = "#00ADEF";
+lessThan3.style.background = "#80CC28";
+lessThan4.style.background = "#FC2779";
+between1.style.background = "#FFBC00BF";
+between2.style.background = "#00ADEFBF";
+between3.style.background = "#80CC28CC";
+between23.style.background = "#80CC2899";
+between24.style.background = "#FC277999";
+between4.style.background = "#FC2779CC";
+greaterThan1.style.background = "#FFBC0080";
+greaterThan2.style.background = "#00ADEF80";
+greaterThan3.style.background = "#80CC2866  ";
+greaterThan4.style.background = "#FC277966";
